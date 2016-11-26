@@ -8,5 +8,6 @@ namespace Capa3_Dominio
 {
     class Hola
     {
+        public int hola { get; set; }
     }
 }
