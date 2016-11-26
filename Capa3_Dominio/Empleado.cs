@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Capa3_Dominio
+{
+    class Empleado
+    {
+        public int Id_empleado { get; set; }
+        public string Numero_documento { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido_paterno { get; set; }
+        public string Apellido_materno { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public char Tipo_empleado { get; set; }
+        public string Nombre_usuario { get; set; }
+        public string Contraseña { get; set; }
+        public TipoDocumento Tipo_documento { get; set; }
+    }
+}
