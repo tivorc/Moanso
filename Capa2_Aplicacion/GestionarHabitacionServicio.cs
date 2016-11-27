@@ -13,11 +13,22 @@ namespace Capa2_Aplicacion
     {
         private GestorDAOSQL gestorDAOSQL;
         private TipoHabitacionDAO tipoHabitacionDAO;
+        private HabitacionDAO habitacionDAO;
 
         public GestionarHabitacionServicio()
         {
             gestorDAOSQL = new GestorDAOSQL();
             tipoHabitacionDAO = new TipoHabitacionDAO(gestorDAOSQL);
+            habitacionDAO = new HabitacionDAO(gestorDAOSQL);
+        }
+        public int guardarHabitacion(TipoHabitacion tipoHabitacion)
+        {
+            int registros_afectados;
+            gestorDAOSQL.abrirConexion();
+            Habitacion habitacion = new Habitacion();
+            habitacion.Tipo_habitacion = tipoHabitacion;
+            registros_afectados = habitacionDAO.guardarHabitacion(habitacion);
+            return registros_afectados;
         }
         
     }
