@@ -8,7 +8,7 @@ using Capa3_Dominio;
 
 namespace Capa4_Persistencia
 {
-    class TipoDocumentoDAO
+    public class TipoDocumentoDAO
     {
         private GestorDAOSQL gestorDAOSQL;
         public TipoDocumentoDAO(GestorDAOSQL gestorDAOSQL)
