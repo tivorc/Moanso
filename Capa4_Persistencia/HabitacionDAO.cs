@@ -8,7 +8,7 @@ using Capa3_Dominio;
 
 namespace Capa4_Persistencia
 {
-    class HabitacionDAO
+    public class HabitacionDAO
     {
         private GestorDAOSQL gestorDAOSQL;
         public HabitacionDAO(GestorDAOSQL gestorDAOSQL)
