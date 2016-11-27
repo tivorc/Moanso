@@ -47,10 +47,6 @@
       <Project>{031616bd-c34d-4bdc-9ec9-0e8838043f1a}</Project>
       <Name>Capa3_Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Capa4_Presistencia\Capa4_Presistencia.csproj">
-      <Project>{571c7afa-6669-4456-aa21-b8cbcbdd4676}</Project>
-      <Name>Capa4_Presistencia</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
