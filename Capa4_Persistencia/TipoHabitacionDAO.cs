@@ -20,7 +20,7 @@ namespace Capa4_Persistencia
         {
             List<TipoHabitacion> listaTipoHabitaciones = new List<TipoHabitacion>();
             TipoHabitacion tipoHabitacion;
-            string sentenciaSQL = "SELECT id_tipo_habitacion, nombre, descripcion, precio FROM TipoHabitacion";
+            string sentenciaSQL = "SELECT id_tipo_habitacion, nombre, descripcion, precio_hora, precio_dia FROM TipoHabitacion";
             try
             {
                 SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
@@ -45,7 +45,8 @@ namespace Capa4_Persistencia
             tipoHabitacion.Id_tipo_habitacion = resultado.GetInt32(0);
             tipoHabitacion.Nombre = resultado.GetString(1);
             tipoHabitacion.Descripcion = resultado.GetString(2);
-            tipoHabitacion.Precio = resultado.GetDouble(3);
+            tipoHabitacion.PrecioDia = resultado.GetDouble(3);
+            tipoHabitacion.PrecioHora = resultado.GetDouble(4);
             return tipoHabitacion;
         }
         
