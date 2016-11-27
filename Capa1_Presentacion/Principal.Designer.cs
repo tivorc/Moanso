@@ -54,6 +54,7 @@
             this.btnHabitacion.Size = new System.Drawing.Size(85, 86);
             this.btnHabitacion.TabIndex = 1;
             this.btnHabitacion.UseVisualStyleBackColor = true;
+            this.btnHabitacion.Click += new System.EventHandler(this.btnHabitacion_Click);
             // 
             // btnEmpleado
             // 

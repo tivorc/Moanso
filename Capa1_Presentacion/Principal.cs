@@ -12,6 +12,7 @@ namespace Capa1_Presentacion
 {
     public partial class Principal : Form
     {
+        GestionarHabitacion gestionarHabitacion = new GestionarHabitacion();
         public Principal()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace Capa1_Presentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHabitacion_Click(object sender, EventArgs e)
+        {
+            gestionarHabitacion.Show();
+            this.Hide();
         }
     }
 }
