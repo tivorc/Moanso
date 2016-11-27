@@ -19,7 +19,9 @@ namespace Capa4_Persistencia
         public int guardarCliente(Cliente cliente)
         {
             int registro_afectados;
-            string sentenciaSQL = "INSERT INTO Cliente";
+            string sentenciaSQL = "INSERT INTO Cliente(numero_documento, nombre, apellido_paterno, apellido_materno, direccion, " +
+                "telefono, tipo_cliente, ruc, razon_social, id_tipo_documento) VALUES(@numero_documento, @nombre, @apellido_paterno, " +
+                "@direccion, @telefono, @tipo_cliente, @ruc, @razon_social, @id_tipo_documento)";
             try
             {
                 SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
