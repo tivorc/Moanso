@@ -36,6 +36,25 @@ namespace Capa4_Persistencia
             }
         }
 
+        public int modificarCliente(Cliente cliente)
+        {
+            int registros_afectados;
+            string sentenciaSQL = "UPDATE Cliente SET numero_documento = @numero_documento, nombre = @nombre, apellido_paterno = @apellido_paterno, apellido_materno = @apellido_materno, direccion = @direccion, " + 
+                "telefono = @telefono, tipo_cliente = @tipo_cliente, ruc = @ruc, razon_social = @razon_social, id_documento = @id_documento WHERE id_cliente = @id_cliente";
+            try
+            {
+                SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
+                asignarParametros(cliente, comando);
+                comando.Parameters.AddWithValue("@id_cliente", cliente.Id_cliente);
+                registros_afectados = comando.ExecuteNonQuery();
+                return registros_afectados;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         private void asignarParametros(Cliente cliente, SqlCommand comando)
         {
             comando.Parameters.AddWithValue("@numero_documento", cliente.Numero_documento);
