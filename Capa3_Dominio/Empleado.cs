@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class Empleado
+   public class Empleado
     {
         public int Id_empleado { get; set; }
         public string Numero_documento { get; set; }

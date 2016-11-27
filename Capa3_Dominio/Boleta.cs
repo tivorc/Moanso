@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class Boleta : ComprobanteDePago
+   public class Boleta : ComprobanteDePago
     {
         public int Numero { get; set; }
         public int Serie { get; set; }

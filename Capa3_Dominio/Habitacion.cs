@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class Habitacion
+   public class Habitacion
     {
         public int Id_habitacion { get; set; }
         public string Numero { get; set; }
@@ -14,6 +14,7 @@ namespace Capa3_Dominio
         public char Estado { get; set; }
         public TipoHabitacion Tipo_habitacion { get; set; }
 
+        
 
     }
 }

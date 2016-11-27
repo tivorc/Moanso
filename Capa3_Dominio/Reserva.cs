@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class Reserva
+   public class Reserva
     {
         public int Id_reserva { get; set; }
         public DateTime Fecha_inicio { get; set; }
