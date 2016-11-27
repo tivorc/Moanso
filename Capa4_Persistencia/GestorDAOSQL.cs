@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace Capa4_Presistencia
+namespace Capa4_Persistencia
 {
     class GestorDAOSQL
     {
@@ -18,7 +18,7 @@ namespace Capa4_Presistencia
             try
             {
                 conexion = new SqlConnection();
-                conexion.ConnectionString = "Data Source=(local);Initial Catalog=BDPrueba;Integrated Security=true";
+                conexion.ConnectionString = "Data Source=(local);Initial Catalog=BaseAquariumSoft;Integrated Security=true";
                 conexion.Open();
             }
             catch (Exception e)
