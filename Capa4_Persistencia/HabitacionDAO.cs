@@ -66,6 +66,41 @@ namespace Capa4_Persistencia
             }
         }
 
+        public int modificarHabitacion(Habitacion habitacion)
+        {
+            int registros_afectados;
+            string sentenciaSQL = "UPDATE Habitacion SET nombre = @nombre, numero = @numero, piso = @piso, id_tipo_habitacion = @id_tipo_habitacion";
+            try
+            {
+                SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
+                asignarParametrosHabitacion(habitacion, comando);
+                comando.Parameters.AddWithValue("@id_habitacion", habitacion.Id_habitacion);
+                registros_afectados = comando.ExecuteNonQuery();
+                return registros_afectados;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public int eliminarHabitacion(Habitacion habitacion)
+        {
+            int registros_afectados;
+            string sentenciaSQL = "DELETE FROM Habitacion WHERE id_habitacion = @id_habitacion";
+            try
+            {
+                SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
+                comando.Parameters.AddWithValue("@id_habitacion", habitacion.Id_habitacion);
+                registros_afectados = comando.ExecuteNonQuery();
+                return registros_afectados;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         private void asignarParametrosHabitacion(Habitacion habitacion, SqlCommand comando)
         {
             comando.Parameters.AddWithValue("@numero", habitacion.Numero);
