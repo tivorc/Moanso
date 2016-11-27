@@ -100,6 +100,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa2_Aplicacion\Capa2_Aplicacion.csproj">
+      <Project>{a8cd3cf3-710a-4949-84fb-4472c4337bdf}</Project>
+      <Name>Capa2_Aplicacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa3_Dominio\Capa3_Dominio.csproj">
+      <Project>{031616bd-c34d-4bdc-9ec9-0e8838043f1a}</Project>
+      <Name>Capa3_Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
