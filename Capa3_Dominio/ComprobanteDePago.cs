@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class ComprobanteDePago
+  public  class ComprobanteDePago
     {
         public int Id_comprobante { get; set; }
         public DateTime Fecha { get; set; }

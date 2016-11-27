@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class Factura : ComprobanteDePago
+  public  class Factura : ComprobanteDePago
     {
         public string Numero { get; set; }
         public string Serie { get; set; }

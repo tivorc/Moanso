@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-    class ManejadorDeReservas
+   public class ManejadorDeReservas
     {
         public List<Reserva> ListaReservas { get; }
 
