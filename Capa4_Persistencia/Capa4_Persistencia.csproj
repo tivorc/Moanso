@@ -42,6 +42,13 @@
   <ItemGroup>
     <Compile Include="GestorDAOSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoHabitacionDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa3_Dominio\Capa3_Dominio.csproj">
+      <Project>{031616bd-c34d-4bdc-9ec9-0e8838043f1a}</Project>
+      <Name>Capa3_Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
