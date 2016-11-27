@@ -12,25 +12,9 @@ namespace Capa1_Presentacion
 {
     public partial class Login : Form
     {
-        Principal principal = new Principal();
         public Login()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            principal.Show();
         }
     }
 }
