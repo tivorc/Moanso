@@ -18,7 +18,7 @@ namespace Capa4_Persistencia
 
         public int guardarHabitacion(Habitacion habitacion)
         {
-            int registros_afectados = 0;
+            int registros_afectados;
             String sentenciaSQL = "INSERT INTO Habitacion(numero, piso, estado, id_tipo_habitacion) VALUES(@numero, @piso, @estado, @id_tipo_habitacion)";
             try
             {

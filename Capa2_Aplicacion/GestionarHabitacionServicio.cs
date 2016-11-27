@@ -19,30 +19,7 @@ namespace Capa2_Aplicacion
             gestorDAOSQL = new GestorDAOSQL();
             tipoHabitacionDAO = new TipoHabitacionDAO(gestorDAOSQL);
         }
-
-        /*
-        public int nuevoTipoHabitacion(TipoHabitacion tipoHabitacion)
-        {
-            try
-            {
-                gestorDAOSQL.abrirConexion();
-                int registros_afectados = tipoHabitacionDAO.guardar(tipoHabitacion);
-                gestorDAOSQL.cerrarConexion();
-                return registros_afectados;
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-            //modificar
-            return 0;
-        }
-        */
         
-
-
-
     }
     
 }
