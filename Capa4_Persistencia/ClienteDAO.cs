@@ -55,6 +55,51 @@ namespace Capa4_Persistencia
             }
         }
 
+        public Cliente buscarPorDocumento(string numero_documento)
+        {
+            Cliente cliente = null;
+            String sentenciaSQL = "select id_cliente, numero_documento, nombre, apellido_paterno, apellido_materno FROM Cliente WHERE numero_documento = '" + numero_documento + "'";
+            try
+            {
+                SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
+                if (resultado.Read())
+                {
+                    cliente = new Cliente();
+                    cliente.Id_cliente = resultado.GetInt32(0);
+                    cliente.Numero_documento = resultado.GetString(1);
+                    cliente.Nombre = resultado.GetString(2);
+                    cliente.Apellido_paterno = resultado.GetString(3);
+                    cliente.Apellido_materno = resultado.GetString(4);
+                }
+                resultado.Close();
+                return cliente;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /*
+        private Cliente crearObjetoCliente(SqlDataReader resultado)
+        {
+            Cliente cliente;
+            cliente = new Cliente();
+            cliente.Id_cliente= resultado.GetInt32(0);
+            cliente.Numero_documento = resultado.GetString(1);
+            cliente.Nombre = resultado.GetString(2);
+            cliente.Apellido_paterno = resultado.GetString(3);
+            cliente.Apellido_materno = resultado.GetString(4);
+            cliente.Direccion = resultado.GetString(5);
+            cliente.Telefono = resultado.GetString(6);
+            cliente.Tipo_cliente = resultado.GetString(7);
+            cliente.Ruc = resultado.GetString(8);
+            cliente.Razon_social = resultado.GetString(9);
+            cliente.Ruc = resultado.GetString(10);
+            return cliente;
+        }
+        */
+
         private void asignarParametros(Cliente cliente, SqlCommand comando)
         {
             comando.Parameters.AddWithValue("@numero_documento", cliente.Numero_documento);

@@ -18,7 +18,7 @@ namespace Capa4_Persistencia
             try
             {
                 conexion = new SqlConnection();
-                conexion.ConnectionString = "Data Source=(local);Initial Catalog=BaseAquariumSoft;Integrated Security=true";
+                conexion.ConnectionString = "Data Source=(local);Initial Catalog=BDPrueba;Integrated Security=true";
                 conexion.Open();
             }
             catch (Exception e)

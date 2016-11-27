@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Capa1_Presentacion
 {
-    public partial class GestionarHabitacion : Form
+    public partial class GestionarCliente : Form
     {
-        public GestionarHabitacion()
+        public GestionarCliente()
         {
             InitializeComponent();
         }
@@ -22,9 +22,14 @@ namespace Capa1_Presentacion
 
         }
 
-        private void lblId_Click(object sender, EventArgs e)
+        private void GestionarCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

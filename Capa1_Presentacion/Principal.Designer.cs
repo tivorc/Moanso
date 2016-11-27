@@ -32,7 +32,7 @@
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnHabitacion = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
-            this.btnCalendario = new System.Windows.Forms.Button();
+            this.btnReserva = new System.Windows.Forms.Button();
             this.btnPago = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -65,14 +65,15 @@
             this.btnEmpleado.TabIndex = 2;
             this.btnEmpleado.UseVisualStyleBackColor = true;
             // 
-            // btnCalendario
+            // btnReserva
             // 
-            this.btnCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendario.Image")));
-            this.btnCalendario.Location = new System.Drawing.Point(311, 51);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(78, 86);
-            this.btnCalendario.TabIndex = 3;
-            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.btnReserva.Image = ((System.Drawing.Image)(resources.GetObject("btnReserva.Image")));
+            this.btnReserva.Location = new System.Drawing.Point(311, 51);
+            this.btnReserva.Name = "btnReserva";
+            this.btnReserva.Size = new System.Drawing.Size(78, 86);
+            this.btnReserva.TabIndex = 3;
+            this.btnReserva.UseVisualStyleBackColor = true;
+            this.btnReserva.Click += new System.EventHandler(this.btnCalendario_Click);
             // 
             // btnPago
             // 
@@ -102,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(439, 322);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPago);
-            this.Controls.Add(this.btnCalendario);
+            this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.btnEmpleado);
             this.Controls.Add(this.btnHabitacion);
             this.Controls.Add(this.btnReporte);
@@ -117,7 +118,7 @@
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnHabitacion;
         private System.Windows.Forms.Button btnEmpleado;
-        private System.Windows.Forms.Button btnCalendario;
+        private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Button btnPago;
         private System.Windows.Forms.Button btnSalir;
     }

@@ -13,6 +13,7 @@ namespace Capa1_Presentacion
     public partial class Principal : Form
     {
         GestionarHabitacion gestionarHabitacion = new GestionarHabitacion();
+        GestionarReserva gestionarReserva = new GestionarReserva();
         public Principal()
         {
             InitializeComponent();
@@ -26,6 +27,12 @@ namespace Capa1_Presentacion
         private void btnHabitacion_Click(object sender, EventArgs e)
         {
             gestionarHabitacion.Show();
+            this.Hide();
+        }
+
+        private void btnCalendario_Click(object sender, EventArgs e)
+        {
+            gestionarReserva.Show();
             this.Hide();
         }
     }

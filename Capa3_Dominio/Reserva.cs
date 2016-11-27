@@ -6,29 +6,33 @@ using System.Threading.Tasks;
 
 namespace Capa3_Dominio
 {
-   public class Reserva
+    public class Reserva
     {
         public int Id_reserva { get; set; }
-        public DateTime Fecha_inicio { get; set; }
-        public DateTime Fecha_fin { get; set; }
+        public DateTimeOffset Fecha_inicio { get; set; }
+        public DateTimeOffset Fecha_fin { get; set; }
         public char Estado { get; set; }
         public char Tipo_reserva { get; set; }
+        public double Precio { get; set; }
         public Habitacion Habitacion { get; set; }
         public Empleado empleado { get; set; }
         public List<Cliente> Lista_cliente { get; set; }
 
-        public int calcularDiasHospedaje(DateTimeOffset inicio, DateTimeOffset fin)
+
+
+        public bool definirCobro()
         {
 
-            TimeSpan ts = fin - inicio;
-            return ts.Days;
+            if (Fecha_inicio.Day == Fecha_fin.Day)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
-        public int calcularHorasHospedaje(DateTimeOffset inicio, DateTimeOffset fin)
-        {
-            TimeSpan ts = fin - inicio;
-            return ts.Hours;
-        } 
     }
 
 
