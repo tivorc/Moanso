@@ -53,5 +53,15 @@ namespace Capa1_Presentacion
                 MessageBox.Show(this, "Ocurrio un problema a ejecutar la consula de alumnos. \n\nIntente de nuevo o verifique con el Administrador.", "AquariumSof: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void iniciarConsulta()
+        {
+            ejecutarConsulta("");
+            //texNombre.Text = "";
+            //texNombre.Focus();
+        }
+        private void FormGestionarAlumnos_Shown(object sender, EventArgs e)
+        {
+            iniciarConsulta();
+        }
     }
 }
