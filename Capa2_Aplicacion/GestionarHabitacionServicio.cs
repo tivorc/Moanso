@@ -34,6 +34,8 @@ namespace Capa2_Aplicacion
 
                 throw e;
             }
+            //modificar
+            return 0;
         }
         
 

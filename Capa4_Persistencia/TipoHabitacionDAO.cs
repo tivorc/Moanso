@@ -40,6 +40,7 @@ namespace Capa4_Persistencia
         {
             int registros_afectados;
             string sentenciaSQL = "update TipoHabitacion set nombre=@nombre,descripcion=@descripcion,precio=@precio where id_tipo_habitacion = @id_tipo_habitacion";
+            return 0;
         }
     }
 }
