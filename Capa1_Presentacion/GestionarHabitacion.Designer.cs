@@ -28,153 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.lblPiso = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.txtPiso = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.tblHabitacion = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblnumero = new System.Windows.Forms.Label();
+            this.txtnumero = new System.Windows.Forms.TextBox();
+            this.txtpiso = new System.Windows.Forms.TextBox();
+            this.txtestado = new System.Windows.Forms.TextBox();
+            this.txtPreciohora = new System.Windows.Forms.TextBox();
             this.btnAgregarHabitacion = new System.Windows.Forms.Button();
             this.btnModificarHabitacion = new System.Windows.Forms.Button();
             this.btnEliminarHabitacion = new System.Windows.Forms.Button();
             this.btnGuardarHabitacion = new System.Windows.Forms.Button();
             this.btnCancelarHabitacion = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHabitacion)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblpiso = new System.Windows.Forms.Label();
+            this.lblestado = new System.Windows.Forms.Label();
+            this.lblnombre = new System.Windows.Forms.Label();
+            this.lbldescipcion = new System.Windows.Forms.Label();
+            this.lblpreciohora = new System.Windows.Forms.Label();
+            this.lblpreciodia = new System.Windows.Forms.Label();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtdescipcion = new System.Windows.Forms.TextBox();
+            this.txtpreciodia = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblId
+            // lblnumero
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(693, 29);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(21, 13);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID:";
+            this.lblnumero.AutoSize = true;
+            this.lblnumero.Location = new System.Drawing.Point(814, 29);
+            this.lblnumero.Name = "lblnumero";
+            this.lblnumero.Size = new System.Drawing.Size(47, 13);
+            this.lblnumero.TabIndex = 0;
+            this.lblnumero.Text = "Numero:";
+            this.lblnumero.Click += new System.EventHandler(this.lblId_Click);
             // 
-            // lblNumero
+            // txtnumero
             // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(692, 75);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(50, 13);
-            this.lblNumero.TabIndex = 1;
-            this.lblNumero.Text = "Numero: ";
+            this.txtnumero.Location = new System.Drawing.Point(960, 22);
+            this.txtnumero.Name = "txtnumero";
+            this.txtnumero.Size = new System.Drawing.Size(121, 20);
+            this.txtnumero.TabIndex = 6;
             // 
-            // lblPiso
+            // txtpiso
             // 
-            this.lblPiso.AutoSize = true;
-            this.lblPiso.Location = new System.Drawing.Point(693, 121);
-            this.lblPiso.Name = "lblPiso";
-            this.lblPiso.Size = new System.Drawing.Size(30, 13);
-            this.lblPiso.TabIndex = 2;
-            this.lblPiso.Text = "Piso:";
+            this.txtpiso.Location = new System.Drawing.Point(960, 68);
+            this.txtpiso.Name = "txtpiso";
+            this.txtpiso.Size = new System.Drawing.Size(121, 20);
+            this.txtpiso.TabIndex = 7;
             // 
-            // lblEstado
+            // txtestado
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(693, 163);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(43, 13);
-            this.lblEstado.TabIndex = 3;
-            this.lblEstado.Text = "Estado:";
+            this.txtestado.Location = new System.Drawing.Point(960, 114);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.Size = new System.Drawing.Size(121, 20);
+            this.txtestado.TabIndex = 8;
             // 
-            // lblTipo
+            // txtPreciohora
             // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(693, 207);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(31, 13);
-            this.lblTipo.TabIndex = 4;
-            this.lblTipo.Text = "Tipo:";
+            this.txtPreciohora.Location = new System.Drawing.Point(960, 247);
+            this.txtPreciohora.Name = "txtPreciohora";
+            this.txtPreciohora.Size = new System.Drawing.Size(121, 20);
+            this.txtPreciohora.TabIndex = 9;
             // 
-            // lblPrecio
+            // btnAgregarHabitacion
             // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(693, 250);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(40, 13);
-            this.lblPrecio.TabIndex = 5;
-            this.lblPrecio.Text = "Precio:";
+            this.btnAgregarHabitacion.Location = new System.Drawing.Point(163, 369);
+            this.btnAgregarHabitacion.Name = "btnAgregarHabitacion";
+            this.btnAgregarHabitacion.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarHabitacion.TabIndex = 13;
+            this.btnAgregarHabitacion.Text = "Agregar";
+            this.btnAgregarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // txtId
+            // btnModificarHabitacion
             // 
-            this.txtId.Location = new System.Drawing.Point(788, 29);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(121, 20);
-            this.txtId.TabIndex = 6;
+            this.btnModificarHabitacion.Location = new System.Drawing.Point(321, 369);
+            this.btnModificarHabitacion.Name = "btnModificarHabitacion";
+            this.btnModificarHabitacion.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarHabitacion.TabIndex = 14;
+            this.btnModificarHabitacion.Text = "Modificar";
+            this.btnModificarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // txtNumero
+            // btnEliminarHabitacion
             // 
-            this.txtNumero.Location = new System.Drawing.Point(788, 72);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(121, 20);
-            this.txtNumero.TabIndex = 7;
+            this.btnEliminarHabitacion.Location = new System.Drawing.Point(463, 369);
+            this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
+            this.btnEliminarHabitacion.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarHabitacion.TabIndex = 15;
+            this.btnEliminarHabitacion.Text = "Eliminar";
+            this.btnEliminarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // txtPiso
+            // btnGuardarHabitacion
             // 
-            this.txtPiso.Location = new System.Drawing.Point(788, 118);
-            this.txtPiso.Name = "txtPiso";
-            this.txtPiso.Size = new System.Drawing.Size(121, 20);
-            this.txtPiso.TabIndex = 8;
+            this.btnGuardarHabitacion.Location = new System.Drawing.Point(817, 369);
+            this.btnGuardarHabitacion.Name = "btnGuardarHabitacion";
+            this.btnGuardarHabitacion.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarHabitacion.TabIndex = 16;
+            this.btnGuardarHabitacion.Text = "Guardar";
+            this.btnGuardarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // txtPrecio
+            // btnCancelarHabitacion
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(788, 250);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(121, 20);
-            this.txtPrecio.TabIndex = 9;
+            this.btnCancelarHabitacion.Location = new System.Drawing.Point(972, 369);
+            this.btnCancelarHabitacion.Name = "btnCancelarHabitacion";
+            this.btnCancelarHabitacion.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarHabitacion.TabIndex = 17;
+            this.btnCancelarHabitacion.Text = "Cancelar";
+            this.btnCancelarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // cbEstado
+            // dataGridView1
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(788, 160);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(121, 21);
-            this.cbEstado.TabIndex = 10;
-            // 
-            // cbTipo
-            // 
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(788, 204);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 21);
-            this.cbTipo.TabIndex = 11;
-            // 
-            // tblHabitacion
-            // 
-            this.tblHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblHabitacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
             this.Piso,
             this.Estado,
-            this.Tipo,
-            this.Precio});
-            this.tblHabitacion.GridColor = System.Drawing.Color.White;
-            this.tblHabitacion.Location = new System.Drawing.Point(24, 31);
-            this.tblHabitacion.Name = "tblHabitacion";
-            this.tblHabitacion.Size = new System.Drawing.Size(617, 150);
-            this.tblHabitacion.TabIndex = 12;
-            this.tblHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.Nombre,
+            this.Descripcion,
+            this.PrecioHora,
+            this.PrecioDia});
+            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(744, 294);
+            this.dataGridView1.TabIndex = 18;
             // 
             // Numero
             // 
@@ -191,96 +172,129 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             // 
-            // Tipo
+            // Nombre
             // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // Precio
+            // Descripcion
             // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
+            this.Descripcion.HeaderText = "Descipcion";
+            this.Descripcion.Name = "Descripcion";
             // 
-            // btnAgregarHabitacion
+            // PrecioHora
             // 
-            this.btnAgregarHabitacion.Location = new System.Drawing.Point(217, 239);
-            this.btnAgregarHabitacion.Name = "btnAgregarHabitacion";
-            this.btnAgregarHabitacion.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarHabitacion.TabIndex = 13;
-            this.btnAgregarHabitacion.Text = "Agregar";
-            this.btnAgregarHabitacion.UseVisualStyleBackColor = true;
+            this.PrecioHora.HeaderText = "PrecioHora";
+            this.PrecioHora.Name = "PrecioHora";
             // 
-            // btnModificarHabitacion
+            // PrecioDia
             // 
-            this.btnModificarHabitacion.Location = new System.Drawing.Point(333, 239);
-            this.btnModificarHabitacion.Name = "btnModificarHabitacion";
-            this.btnModificarHabitacion.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarHabitacion.TabIndex = 14;
-            this.btnModificarHabitacion.Text = "Modificar";
-            this.btnModificarHabitacion.UseVisualStyleBackColor = true;
+            this.PrecioDia.HeaderText = "PrecioDia";
+            this.PrecioDia.Name = "PrecioDia";
             // 
-            // btnEliminarHabitacion
+            // lblpiso
             // 
-            this.btnEliminarHabitacion.Location = new System.Drawing.Point(450, 240);
-            this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
-            this.btnEliminarHabitacion.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarHabitacion.TabIndex = 15;
-            this.btnEliminarHabitacion.Text = "Eliminar";
-            this.btnEliminarHabitacion.UseVisualStyleBackColor = true;
+            this.lblpiso.AutoSize = true;
+            this.lblpiso.Location = new System.Drawing.Point(814, 75);
+            this.lblpiso.Name = "lblpiso";
+            this.lblpiso.Size = new System.Drawing.Size(30, 13);
+            this.lblpiso.TabIndex = 19;
+            this.lblpiso.Text = "Piso:";
             // 
-            // btnGuardarHabitacion
+            // lblestado
             // 
-            this.btnGuardarHabitacion.Location = new System.Drawing.Point(715, 298);
-            this.btnGuardarHabitacion.Name = "btnGuardarHabitacion";
-            this.btnGuardarHabitacion.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarHabitacion.TabIndex = 16;
-            this.btnGuardarHabitacion.Text = "Guardar";
-            this.btnGuardarHabitacion.UseVisualStyleBackColor = true;
+            this.lblestado.AutoSize = true;
+            this.lblestado.Location = new System.Drawing.Point(814, 121);
+            this.lblestado.Name = "lblestado";
+            this.lblestado.Size = new System.Drawing.Size(43, 13);
+            this.lblestado.TabIndex = 20;
+            this.lblestado.Text = "Estado:";
             // 
-            // btnCancelarHabitacion
+            // lblnombre
             // 
-            this.btnCancelarHabitacion.Location = new System.Drawing.Point(834, 298);
-            this.btnCancelarHabitacion.Name = "btnCancelarHabitacion";
-            this.btnCancelarHabitacion.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarHabitacion.TabIndex = 17;
-            this.btnCancelarHabitacion.Text = "Cancelar";
-            this.btnCancelarHabitacion.UseVisualStyleBackColor = true;
+            this.lblnombre.AutoSize = true;
+            this.lblnombre.Location = new System.Drawing.Point(814, 163);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(47, 13);
+            this.lblnombre.TabIndex = 21;
+            this.lblnombre.Text = "Nombre:";
             // 
-            // splitter1
+            // lbldescipcion
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(653, 339);
-            this.splitter1.TabIndex = 18;
-            this.splitter1.TabStop = false;
+            this.lbldescipcion.AutoSize = true;
+            this.lbldescipcion.Location = new System.Drawing.Point(814, 202);
+            this.lbldescipcion.Name = "lbldescipcion";
+            this.lbldescipcion.Size = new System.Drawing.Size(63, 13);
+            this.lbldescipcion.TabIndex = 22;
+            this.lbldescipcion.Text = "Descripcion";
+            // 
+            // lblpreciohora
+            // 
+            this.lblpreciohora.AutoSize = true;
+            this.lblpreciohora.Location = new System.Drawing.Point(814, 245);
+            this.lblpreciohora.Name = "lblpreciohora";
+            this.lblpreciohora.Size = new System.Drawing.Size(66, 13);
+            this.lblpreciohora.TabIndex = 23;
+            this.lblpreciohora.Text = "Precio Hora:";
+            // 
+            // lblpreciodia
+            // 
+            this.lblpreciodia.AutoSize = true;
+            this.lblpreciodia.Location = new System.Drawing.Point(814, 284);
+            this.lblpreciodia.Name = "lblpreciodia";
+            this.lblpreciodia.Size = new System.Drawing.Size(59, 13);
+            this.lblpreciodia.TabIndex = 24;
+            this.lblpreciodia.Text = "Precio Dia:";
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(960, 163);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(121, 20);
+            this.txtnombre.TabIndex = 25;
+            // 
+            // txtdescipcion
+            // 
+            this.txtdescipcion.Location = new System.Drawing.Point(960, 202);
+            this.txtdescipcion.Name = "txtdescipcion";
+            this.txtdescipcion.Size = new System.Drawing.Size(121, 20);
+            this.txtdescipcion.TabIndex = 26;
+            // 
+            // txtpreciodia
+            // 
+            this.txtpreciodia.Location = new System.Drawing.Point(960, 284);
+            this.txtpreciodia.Name = "txtpreciodia";
+            this.txtpreciodia.Size = new System.Drawing.Size(121, 20);
+            this.txtpreciodia.TabIndex = 27;
             // 
             // GestionarHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 339);
+            this.ClientSize = new System.Drawing.Size(1138, 475);
+            this.Controls.Add(this.txtpreciodia);
+            this.Controls.Add(this.txtdescipcion);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.lblpreciodia);
+            this.Controls.Add(this.lblpreciohora);
+            this.Controls.Add(this.lbldescipcion);
+            this.Controls.Add(this.lblnombre);
+            this.Controls.Add(this.lblestado);
+            this.Controls.Add(this.lblpiso);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancelarHabitacion);
             this.Controls.Add(this.btnGuardarHabitacion);
             this.Controls.Add(this.btnEliminarHabitacion);
             this.Controls.Add(this.btnModificarHabitacion);
             this.Controls.Add(this.btnAgregarHabitacion);
-            this.Controls.Add(this.tblHabitacion);
-            this.Controls.Add(this.cbTipo);
-            this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtPiso);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblPiso);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.txtPreciohora);
+            this.Controls.Add(this.txtestado);
+            this.Controls.Add(this.txtpiso);
+            this.Controls.Add(this.txtnumero);
+            this.Controls.Add(this.lblnumero);
             this.Name = "GestionarHabitacion";
             this.Text = "GestionarHabitacion";
-            ((System.ComponentModel.ISupportInitialize)(this.tblHabitacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,30 +302,32 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label lblPiso;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtPiso;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.ComboBox cbTipo;
-        private System.Windows.Forms.DataGridView tblHabitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.Label lblnumero;
+        private System.Windows.Forms.TextBox txtnumero;
+        private System.Windows.Forms.TextBox txtpiso;
+        private System.Windows.Forms.TextBox txtestado;
+        private System.Windows.Forms.TextBox txtPreciohora;
         private System.Windows.Forms.Button btnAgregarHabitacion;
         private System.Windows.Forms.Button btnModificarHabitacion;
         private System.Windows.Forms.Button btnEliminarHabitacion;
         private System.Windows.Forms.Button btnGuardarHabitacion;
         private System.Windows.Forms.Button btnCancelarHabitacion;
-        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioDia;
+        private System.Windows.Forms.Label lblpiso;
+        private System.Windows.Forms.Label lblestado;
+        private System.Windows.Forms.Label lblnombre;
+        private System.Windows.Forms.Label lbldescipcion;
+        private System.Windows.Forms.Label lblpreciohora;
+        private System.Windows.Forms.Label lblpreciodia;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtdescipcion;
+        private System.Windows.Forms.TextBox txtpreciodia;
     }
 }
