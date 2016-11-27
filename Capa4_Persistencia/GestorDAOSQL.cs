@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Capa4_Persistencia
 {
-    class GestorDAOSQL
+    public class GestorDAOSQL
     {
         private SqlConnection conexion;
         private SqlTransaction transaccion;
