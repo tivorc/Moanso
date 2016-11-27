@@ -72,7 +72,7 @@ namespace Capa4_Persistencia
             List<Habitacion> listaHabitacionesDisponibles = new List<Habitacion>();
             Habitacion habitacion;
             TipoHabitacion tipoHabitacion;
-            string sentenciaSQL = "SELECT h.id_habitacion, h.numero, h.piso, h.estado, t.nombre, t.precio_hora, t.precio_dia FROM Habitacion h inner join TipoHabitacion t on h.id_tipo_habitacion = t.id_tipo_habitacion";
+            string sentenciaSQL = "SELECT h.numero, h.piso, h.estado, t.nombre, descripcion, t.precio_hora, t.precio_dia FROM Habitacion h inner join TipoHabitacion t on h.id_tipo_habitacion = t.id_tipo_habitacion";
             try
             {
                 SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
@@ -81,11 +81,11 @@ namespace Capa4_Persistencia
 
                     habitacion = new Habitacion();
                     tipoHabitacion = new TipoHabitacion();
-                    habitacion.Id_habitacion = resultado.GetInt32(0);
-                    habitacion.Numero = resultado.GetString(1);
-                    habitacion.Piso = resultado.GetString(2);
-                    habitacion.Estado = resultado.GetString(3);
-                    tipoHabitacion.Nombre = resultado.GetString(4);
+                    habitacion.Numero = resultado.GetString(0);
+                    habitacion.Piso = resultado.GetString(1);
+                    habitacion.Estado = resultado.GetString(2);
+                    tipoHabitacion.Nombre = resultado.GetString(3);
+                    tipoHabitacion.Descripcion = resultado.GetString(4);
                     tipoHabitacion.PrecioHora = resultado.GetDouble(5);
                     tipoHabitacion.PrecioDia = resultado.GetDouble(6);
                     habitacion.Tipo_habitacion = tipoHabitacion;
