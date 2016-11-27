@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa1
+namespace Capa1_Presentacion
 {
     static class Program
     {

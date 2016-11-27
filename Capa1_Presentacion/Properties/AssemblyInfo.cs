@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Capa1")]
+[assembly: AssemblyTitle("Capa1_Presentacion")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Toshiba")]
-[assembly: AssemblyProduct("Capa1")]
+[assembly: AssemblyProduct("Capa1_Presentacion")]
 [assembly: AssemblyCopyright("Copyright © Toshiba 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("34a72d29-2cbd-41e0-a640-5f9d6ae37286")]
+[assembly: Guid("f17191f0-cad8-46a3-8ce0-f8392f9192f3")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
