@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa2_Aplicacion;
+using Capa3_Dominio;
 
 namespace Capa1_Presentacion
 {
@@ -25,6 +27,31 @@ namespace Capa1_Presentacion
         private void lblId_Click(object sender, EventArgs e)
         {
 
+        }
+        private void ejecutarConsulta(string nombre)
+        {
+            try
+            {
+                GestionarHabitacionServicio gestionarhabitacionservicio = new GestionarHabitacionServicio();
+                List<Habitacion> listahabitacion = gestionarhabitacionservicio.MostrarHabitaciones();
+                if (listahabitacion.Count > 0) // para verificar si existen filas
+                {
+                    tablaHabitacion.Columns.Clear(); // se eliminan todas las columnas existentes del DataGridView antes de mostrar el resultado de la consulta
+                    BindingSource datosEnlazados = new BindingSource(); // objeto para vincular el resultado de la consulta al DataGridView
+                    datosEnlazados.DataSource = listahabitacion;
+                    tablaHabitacion.DataSource = datosEnlazados; // se vincula el resultado de la consulta al DataGridView y se mostran los registros
+                    //configurarColumnasDataGridView();
+                    tablaHabitacion.Rows[0].Selected = false; // permite que la primera fila del DataGridView no esté seleccionada
+                }
+                else
+                {
+                    tablaHabitacion.Rows.Clear(); // se eliminan todas las filas existentes del DataGridView
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(this, "Ocurrio un problema a ejecutar la consula de alumnos. \n\nIntente de nuevo o verifique con el Administrador.", "AquariumSof: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
