@@ -8,7 +8,7 @@ using Capa3_Dominio;
 
 namespace Capa4_Persistencia
 {
-    class TipoHabitacionDAO
+    public class TipoHabitacionDAO
     {
         private GestorDAOSQL gestorDAOSQL;
         public TipoHabitacionDAO(GestorDAOSQL gestorDAOSQL)
@@ -35,6 +35,11 @@ namespace Capa4_Persistencia
 
                 throw e;
             }
+        }
+        public int modificar(TipoHabitacion tipoHabitacion)
+        {
+            int registros_afectados;
+            string sentenciaSQL = "update TipoHabitacion set nombre=@nombre,descripcion=@descripcion,precio=@precio where id_tipo_habitacion = @id_tipo_habitacion";
         }
     }
 }
