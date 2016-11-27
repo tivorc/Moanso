@@ -12,7 +12,7 @@ namespace Capa3_Dominio
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
-        public string hola { get; set; }
+       // public string hola { get; set; }
 
     }
 }
