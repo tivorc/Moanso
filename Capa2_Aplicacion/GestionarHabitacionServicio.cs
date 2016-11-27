@@ -71,6 +71,20 @@ namespace Capa2_Aplicacion
                 throw e;
             }
         }
+        public List<Habitacion> MostrarHabitaciones()
+        {
+            try
+            {
+                gestorDAOSQL.abrirConexion();
+                List<Habitacion> listarHabitaciones = habitacionDAO.listarHabitaciones();
+                gestorDAOSQL.cerrarConexion();
+                return listarHabitaciones;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
 
     }
     
