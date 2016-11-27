@@ -34,14 +34,15 @@
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCalendario = new System.Windows.Forms.Button();
             this.btnPago = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReporte
             // 
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
-            this.btnReporte.Location = new System.Drawing.Point(284, 198);
+            this.btnReporte.Location = new System.Drawing.Point(176, 192);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(81, 75);
+            this.btnReporte.Size = new System.Drawing.Size(85, 81);
             this.btnReporte.TabIndex = 0;
             this.btnReporte.UseVisualStyleBackColor = true;
             // 
@@ -57,7 +58,7 @@
             // btnEmpleado
             // 
             this.btnEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleado.Image")));
-            this.btnEmpleado.Location = new System.Drawing.Point(169, 117);
+            this.btnEmpleado.Location = new System.Drawing.Point(176, 51);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(85, 86);
             this.btnEmpleado.TabIndex = 2;
@@ -76,18 +77,29 @@
             // 
             this.btnPago.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnPago.Image = ((System.Drawing.Image)(resources.GetObject("btnPago.Image")));
-            this.btnPago.Location = new System.Drawing.Point(36, 197);
+            this.btnPago.Location = new System.Drawing.Point(35, 192);
             this.btnPago.Name = "btnPago";
-            this.btnPago.Size = new System.Drawing.Size(81, 76);
+            this.btnPago.Size = new System.Drawing.Size(81, 81);
             this.btnPago.TabIndex = 4;
             this.btnPago.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(329, 263);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(49, 47);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(436, 311);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(439, 322);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPago);
             this.Controls.Add(this.btnCalendario);
             this.Controls.Add(this.btnEmpleado);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Button btnEmpleado;
         private System.Windows.Forms.Button btnCalendario;
         private System.Windows.Forms.Button btnPago;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
