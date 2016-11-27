@@ -20,6 +20,7 @@ namespace Capa2_Aplicacion
             tipoHabitacionDAO = new TipoHabitacionDAO(gestorDAOSQL);
         }
 
+        /*
         public int nuevoTipoHabitacion(TipoHabitacion tipoHabitacion)
         {
             try
@@ -37,6 +38,7 @@ namespace Capa2_Aplicacion
             //modificar
             return 0;
         }
+        */
         
 
 

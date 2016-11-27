@@ -15,32 +15,39 @@ namespace Capa4_Persistencia
         {
             this.gestorDAOSQL = gestorDAOSQL;
         }
-        public int guardar(TipoHabitacion tipohabitacion)
+                
+        public List<TipoHabitacion> listarTipoHabitacion()
         {
-            int registro_afectados;
-            string sentenciaSQL = "inset into TipoHabitacion(nombre, descripcion, precio) values(@nombre, @descripcion, @precio)";
+            List<TipoHabitacion> listaTipoHabitaciones = new List<TipoHabitacion>();
+            TipoHabitacion tipoHabitacion;
+            string sentenciaSQL = "SELECT id_tipo_habitacion, nombre, descripcion, precio FROM TipoHabitacion";
             try
             {
-                SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
-                comando.Parameters.AddWithValue("@nombre", tipohabitacion.Nombre);
-                comando.Parameters.AddWithValue("@descripcion", tipohabitacion.Descripcion);
-                comando.Parameters.AddWithValue("@precio", tipohabitacion.Precio);
-                registro_afectados = comando.ExecuteNonQuery();
-                return registro_afectados;
-
-
+                SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
+                while (resultado.Read())
+                {
+                    tipoHabitacion = crearObjetoTipoHabitacion(resultado);
+                    listaTipoHabitaciones.Add(tipoHabitacion);
+                }
+                resultado.Close();
+                return listaTipoHabitaciones;
             }
             catch (Exception e)
             {
-
                 throw e;
             }
         }
-        public int modificar(TipoHabitacion tipoHabitacion)
+
+        private TipoHabitacion crearObjetoTipoHabitacion(SqlDataReader resultado)
         {
-            int registros_afectados;
-            string sentenciaSQL = "update TipoHabitacion set nombre=@nombre,descripcion=@descripcion,precio=@precio where id_tipo_habitacion = @id_tipo_habitacion";
-            return 1;
+            TipoHabitacion tipoHabitacion;
+            tipoHabitacion = new TipoHabitacion();
+            tipoHabitacion.Id_tipo_habitacion = resultado.GetInt32(0);
+            tipoHabitacion.Nombre = resultado.GetString(1);
+            tipoHabitacion.Descripcion = resultado.GetString(2);
+            tipoHabitacion.Precio = resultado.GetDouble(3);
+            return tipoHabitacion;
         }
+        
     }
 }
