@@ -12,7 +12,11 @@ namespace Capa4_Presistencia
     {
         public void guardar(Habitacion habitacion)
         {
-
+            string cadenaConexion = "Data Source=(local); Initial Catalog=BDPrueba; Integrated Security=true";
+            SqlConnection objetoconexion = new SqlConnection(cadenaConexion);
+            objetoconexion.Open();
+            string sentencia="insert into "
+            
         }
     }
 }
