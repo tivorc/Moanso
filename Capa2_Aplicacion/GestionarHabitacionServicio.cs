@@ -21,16 +21,57 @@ namespace Capa2_Aplicacion
             tipoHabitacionDAO = new TipoHabitacionDAO(gestorDAOSQL);
             habitacionDAO = new HabitacionDAO(gestorDAOSQL);
         }
-        public int guardarHabitacion(TipoHabitacion tipoHabitacion)
+        public int guardarHabitacion(Habitacion habitacion)
         {
-            int registros_afectados;
-            gestorDAOSQL.abrirConexion();
-            Habitacion habitacion = new Habitacion();
-            habitacion.Tipo_habitacion = tipoHabitacion;
-            registros_afectados = habitacionDAO.guardarHabitacion(habitacion);
-            return registros_afectados;
+            try
+            {
+                int registros_afectados=0;
+                gestorDAOSQL.abrirConexion();
+                registros_afectados = habitacionDAO.guardarHabitacion(habitacion);
+                gestorDAOSQL.cerrarConexion();
+                return registros_afectados;
+            }
+            
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
-        
+        public int modificarHabitacion(Habitacion habitacion)
+        {
+            try
+            {
+                int registros_afectados;
+                gestorDAOSQL.abrirConexion();
+                registros_afectados = habitacionDAO.modificarHabitacion(habitacion);
+                gestorDAOSQL.cerrarConexion();
+                return registros_afectados;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
+        }
+
+        public List<Habitacion> MostrarHabitacionesDisponibles()
+        {
+            try
+            {
+                gestorDAOSQL.abrirConexion();
+                List<Habitacion> listarHabitacionesDisponibles = habitacionDAO.listarHabitacionesDisponibles();
+                gestorDAOSQL.cerrarConexion();
+                return listarHabitacionesDisponibles;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
     
 }
