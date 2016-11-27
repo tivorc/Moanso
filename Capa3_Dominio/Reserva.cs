@@ -16,5 +16,20 @@ namespace Capa3_Dominio
         public Habitacion Habitacion { get; set; }
         public Empleado empleado { get; set; }
         public List<Cliente> Lista_cliente { get; set; }
+
+        public int calcularDiasHospedaje(DateTimeOffset inicio, DateTimeOffset fin)
+        {
+
+            TimeSpan ts = fin - inicio;
+            return ts.Days;
+
+        }
+        public int calcularHorasHospedaje(DateTimeOffset inicio, DateTimeOffset fin)
+        {
+            TimeSpan ts = fin - inicio;
+            return ts.Hours;
+        } 
     }
+
+
 }

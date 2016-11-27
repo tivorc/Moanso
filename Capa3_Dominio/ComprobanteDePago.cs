@@ -10,6 +10,11 @@ namespace Capa3_Dominio
     {
         public int Id_comprobante { get; set; }
         public DateTime Fecha { get; set; }
-        public char Estado { get; set; }
+        public string Estado { get; set; }
+
+        public Reserva Reserva { get; set; }
+
+
+   
     }
 }
