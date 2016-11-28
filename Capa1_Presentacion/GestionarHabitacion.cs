@@ -17,10 +17,7 @@ namespace Capa1_Presentacion
         public GestionarHabitacion()
         {
             InitializeComponent();
-            Deshabilitar();
-            
-
-
+            iniciarConsulta();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,35 +60,9 @@ namespace Capa1_Presentacion
             //texNombre.Text = "";
             //texNombre.Focus();
         }
-        private void FormGestionarAlumnos_Shown(object sender, EventArgs e)
+       /* private void FormGestionarAlumnos_Shown(object sender, EventArgs e)
         {
             iniciarConsulta();
-        }
-        private void Deshabilitar()
-        {
-            txtnumero.Enabled = false;
-            cbPiso.Enabled = false;
-            cbEstado.Enabled = false;
-            txtnombre.Enabled = false;
-            txtdescripcion.Enabled = false;
-            txtPreciohora.Enabled = false;
-            txtpreciodia.Enabled = false;
-        }
-
-        private void Habilitar()
-        {
-            txtnumero.Enabled = true;
-            cbPiso.Enabled = true;
-            cbEstado.Enabled = true;
-            txtnombre.Enabled = true;
-            txtdescripcion.Enabled = true;
-            txtPreciohora.Enabled = true;
-            txtpreciodia.Enabled = true;
-        }
-
-        private void btnAgregarHabitacion_Click(object sender, EventArgs e)
-        {
-            Habilitar();
-        }
+        }*/
     }
 }
