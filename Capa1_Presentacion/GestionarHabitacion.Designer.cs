@@ -38,7 +38,7 @@
             this.btnEliminarHabitacion = new System.Windows.Forms.Button();
             this.btnGuardarHabitacion = new System.Windows.Forms.Button();
             this.btnCancelarHabitacion = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tablaHabitacion = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,7 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtdescipcion = new System.Windows.Forms.TextBox();
             this.txtpreciodia = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
             // lblnumero
@@ -141,10 +141,10 @@
             this.btnCancelarHabitacion.Text = "Cancelar";
             this.btnCancelarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // tablaHabitacion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaHabitacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
             this.Piso,
             this.Estado,
@@ -152,10 +152,10 @@
             this.Descripcion,
             this.PrecioHora,
             this.PrecioDia});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 294);
-            this.dataGridView1.TabIndex = 18;
+            this.tablaHabitacion.Location = new System.Drawing.Point(1, 12);
+            this.tablaHabitacion.Name = "tablaHabitacion";
+            this.tablaHabitacion.Size = new System.Drawing.Size(744, 294);
+            this.tablaHabitacion.TabIndex = 18;
             // 
             // Numero
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.lblestado);
             this.Controls.Add(this.lblpiso);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tablaHabitacion);
             this.Controls.Add(this.btnCancelarHabitacion);
             this.Controls.Add(this.btnGuardarHabitacion);
             this.Controls.Add(this.btnEliminarHabitacion);
@@ -294,7 +294,7 @@
             this.Controls.Add(this.lblnumero);
             this.Name = "GestionarHabitacion";
             this.Text = "GestionarHabitacion";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +312,7 @@
         private System.Windows.Forms.Button btnEliminarHabitacion;
         private System.Windows.Forms.Button btnGuardarHabitacion;
         private System.Windows.Forms.Button btnCancelarHabitacion;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tablaHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
