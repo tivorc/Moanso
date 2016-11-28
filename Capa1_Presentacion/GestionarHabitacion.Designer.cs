@@ -30,8 +30,6 @@
         {
             this.lblnumero = new System.Windows.Forms.Label();
             this.txtnumero = new System.Windows.Forms.TextBox();
-            this.txtpiso = new System.Windows.Forms.TextBox();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.txtPreciohora = new System.Windows.Forms.TextBox();
             this.btnAgregarHabitacion = new System.Windows.Forms.Button();
             this.btnModificarHabitacion = new System.Windows.Forms.Button();
@@ -53,8 +51,10 @@
             this.lblpreciohora = new System.Windows.Forms.Label();
             this.lblpreciodia = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.txtdescipcion = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.txtpreciodia = new System.Windows.Forms.TextBox();
+            this.cbPiso = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,20 +75,6 @@
             this.txtnumero.Size = new System.Drawing.Size(121, 20);
             this.txtnumero.TabIndex = 6;
             // 
-            // txtpiso
-            // 
-            this.txtpiso.Location = new System.Drawing.Point(960, 68);
-            this.txtpiso.Name = "txtpiso";
-            this.txtpiso.Size = new System.Drawing.Size(121, 20);
-            this.txtpiso.TabIndex = 7;
-            // 
-            // txtestado
-            // 
-            this.txtestado.Location = new System.Drawing.Point(960, 114);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(121, 20);
-            this.txtestado.TabIndex = 8;
-            // 
             // txtPreciohora
             // 
             this.txtPreciohora.Location = new System.Drawing.Point(960, 247);
@@ -104,6 +90,7 @@
             this.btnAgregarHabitacion.TabIndex = 13;
             this.btnAgregarHabitacion.Text = "Agregar";
             this.btnAgregarHabitacion.UseVisualStyleBackColor = true;
+            this.btnAgregarHabitacion.Click += new System.EventHandler(this.btnAgregarHabitacion_Click);
             // 
             // btnModificarHabitacion
             // 
@@ -253,12 +240,12 @@
             this.txtnombre.Size = new System.Drawing.Size(121, 20);
             this.txtnombre.TabIndex = 25;
             // 
-            // txtdescipcion
+            // txtdescripcion
             // 
-            this.txtdescipcion.Location = new System.Drawing.Point(960, 202);
-            this.txtdescipcion.Name = "txtdescipcion";
-            this.txtdescipcion.Size = new System.Drawing.Size(121, 20);
-            this.txtdescipcion.TabIndex = 26;
+            this.txtdescripcion.Location = new System.Drawing.Point(960, 202);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtdescripcion.TabIndex = 26;
             // 
             // txtpreciodia
             // 
@@ -267,13 +254,38 @@
             this.txtpreciodia.Size = new System.Drawing.Size(121, 20);
             this.txtpreciodia.TabIndex = 27;
             // 
+            // cbPiso
+            // 
+            this.cbPiso.FormattingEnabled = true;
+            this.cbPiso.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbPiso.Location = new System.Drawing.Point(960, 67);
+            this.cbPiso.Name = "cbPiso";
+            this.cbPiso.Size = new System.Drawing.Size(121, 21);
+            this.cbPiso.TabIndex = 28;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "Ocupado"});
+            this.cbEstado.Location = new System.Drawing.Point(960, 121);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado.TabIndex = 29;
+            // 
             // GestionarHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 475);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.cbPiso);
             this.Controls.Add(this.txtpreciodia);
-            this.Controls.Add(this.txtdescipcion);
+            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.lblpreciodia);
             this.Controls.Add(this.lblpreciohora);
@@ -288,8 +300,6 @@
             this.Controls.Add(this.btnModificarHabitacion);
             this.Controls.Add(this.btnAgregarHabitacion);
             this.Controls.Add(this.txtPreciohora);
-            this.Controls.Add(this.txtestado);
-            this.Controls.Add(this.txtpiso);
             this.Controls.Add(this.txtnumero);
             this.Controls.Add(this.lblnumero);
             this.Name = "GestionarHabitacion";
@@ -304,8 +314,6 @@
 
         private System.Windows.Forms.Label lblnumero;
         private System.Windows.Forms.TextBox txtnumero;
-        private System.Windows.Forms.TextBox txtpiso;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.TextBox txtPreciohora;
         private System.Windows.Forms.Button btnAgregarHabitacion;
         private System.Windows.Forms.Button btnModificarHabitacion;
@@ -327,7 +335,9 @@
         private System.Windows.Forms.Label lblpreciohora;
         private System.Windows.Forms.Label lblpreciodia;
         private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.TextBox txtdescipcion;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.TextBox txtpreciodia;
+        private System.Windows.Forms.ComboBox cbPiso;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }
