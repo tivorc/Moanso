@@ -17,6 +17,7 @@ namespace Capa1_Presentacion
         public GestionarHabitacion()
         {
             InitializeComponent();
+            iniciarConsulta();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,9 +60,9 @@ namespace Capa1_Presentacion
             //texNombre.Text = "";
             //texNombre.Focus();
         }
-        private void FormGestionarAlumnos_Shown(object sender, EventArgs e)
+       /* private void FormGestionarAlumnos_Shown(object sender, EventArgs e)
         {
             iniciarConsulta();
-        }
+        }*/
     }
 }
