@@ -59,6 +59,7 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.rdbclientenatural = new System.Windows.Forms.RadioButton();
             this.rbdclientejuridico = new System.Windows.Forms.RadioButton();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblclientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,81 +120,81 @@
             this.lblnumerodocumento.AutoSize = true;
             this.lblnumerodocumento.Location = new System.Drawing.Point(779, 28);
             this.lblnumerodocumento.Name = "lblnumerodocumento";
-            this.lblnumerodocumento.Size = new System.Drawing.Size(101, 13);
+            this.lblnumerodocumento.Size = new System.Drawing.Size(103, 13);
             this.lblnumerodocumento.TabIndex = 1;
-            this.lblnumerodocumento.Text = "numero documento:";
+            this.lblnumerodocumento.Text = "Número documento:";
             // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Location = new System.Drawing.Point(779, 73);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(42, 13);
+            this.lblnombre.Size = new System.Drawing.Size(47, 13);
             this.lblnombre.TabIndex = 2;
-            this.lblnombre.Text = "nombre";
+            this.lblnombre.Text = "Nombre:";
             // 
             // lblapellidopaterno
             // 
             this.lblapellidopaterno.AutoSize = true;
             this.lblapellidopaterno.Location = new System.Drawing.Point(779, 124);
             this.lblapellidopaterno.Name = "lblapellidopaterno";
-            this.lblapellidopaterno.Size = new System.Drawing.Size(82, 13);
+            this.lblapellidopaterno.Size = new System.Drawing.Size(87, 13);
             this.lblapellidopaterno.TabIndex = 3;
-            this.lblapellidopaterno.Text = "apellido paterno";
+            this.lblapellidopaterno.Text = "Apellido Paterno:";
             // 
             // lblapellidomaterno
             // 
             this.lblapellidomaterno.AutoSize = true;
-            this.lblapellidomaterno.Location = new System.Drawing.Point(779, 179);
+            this.lblapellidomaterno.Location = new System.Drawing.Point(777, 175);
             this.lblapellidomaterno.Name = "lblapellidomaterno";
-            this.lblapellidomaterno.Size = new System.Drawing.Size(84, 13);
+            this.lblapellidomaterno.Size = new System.Drawing.Size(89, 13);
             this.lblapellidomaterno.TabIndex = 4;
-            this.lblapellidomaterno.Text = "apellido materno";
+            this.lblapellidomaterno.Text = "Apellido Materno:";
             // 
             // lbldireccion
             // 
             this.lbldireccion.AutoSize = true;
-            this.lbldireccion.Location = new System.Drawing.Point(779, 226);
+            this.lbldireccion.Location = new System.Drawing.Point(779, 217);
             this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(50, 13);
+            this.lbldireccion.Size = new System.Drawing.Size(55, 13);
             this.lbldireccion.TabIndex = 5;
-            this.lbldireccion.Text = "direccion";
+            this.lbldireccion.Text = "Dirección:";
             // 
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;
-            this.lbltelefono.Location = new System.Drawing.Point(779, 291);
+            this.lbltelefono.Location = new System.Drawing.Point(779, 263);
             this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(45, 13);
+            this.lbltelefono.Size = new System.Drawing.Size(52, 13);
             this.lbltelefono.TabIndex = 6;
-            this.lbltelefono.Text = "telefono";
+            this.lbltelefono.Text = "Teléfono:";
             // 
             // lblruc
             // 
             this.lblruc.AutoSize = true;
             this.lblruc.Location = new System.Drawing.Point(1065, 80);
             this.lblruc.Name = "lblruc";
-            this.lblruc.Size = new System.Drawing.Size(22, 13);
+            this.lblruc.Size = new System.Drawing.Size(30, 13);
             this.lblruc.TabIndex = 7;
-            this.lblruc.Text = "ruc";
+            this.lblruc.Text = "Ruc:";
             // 
             // lblrazonsocial
             // 
             this.lblrazonsocial.AutoSize = true;
             this.lblrazonsocial.Location = new System.Drawing.Point(1055, 131);
             this.lblrazonsocial.Name = "lblrazonsocial";
-            this.lblrazonsocial.Size = new System.Drawing.Size(63, 13);
+            this.lblrazonsocial.Size = new System.Drawing.Size(73, 13);
             this.lblrazonsocial.TabIndex = 8;
-            this.lblrazonsocial.Text = "razon social";
+            this.lblrazonsocial.Text = "Razon Social:";
             // 
             // lbltipocliente
             // 
             this.lbltipocliente.AutoSize = true;
             this.lbltipocliente.Location = new System.Drawing.Point(1055, 28);
             this.lbltipocliente.Name = "lbltipocliente";
-            this.lbltipocliente.Size = new System.Drawing.Size(58, 13);
+            this.lbltipocliente.Size = new System.Drawing.Size(66, 13);
             this.lbltipocliente.TabIndex = 9;
-            this.lbltipocliente.Text = "tipo cliente";
+            this.lbltipocliente.Text = "Tipo Cliente:";
             // 
             // txtnumerodocumento
             // 
@@ -218,21 +219,21 @@
             // 
             // txtapellidomaterno
             // 
-            this.txtapellidomaterno.Location = new System.Drawing.Point(886, 179);
+            this.txtapellidomaterno.Location = new System.Drawing.Point(886, 172);
             this.txtapellidomaterno.Name = "txtapellidomaterno";
             this.txtapellidomaterno.Size = new System.Drawing.Size(100, 20);
             this.txtapellidomaterno.TabIndex = 13;
             // 
             // txtdireccion
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(886, 226);
+            this.txtdireccion.Location = new System.Drawing.Point(886, 217);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(100, 20);
             this.txtdireccion.TabIndex = 14;
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(886, 291);
+            this.txttelefono.Location = new System.Drawing.Point(886, 260);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 15;
@@ -253,7 +254,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(886, 353);
+            this.btnagregar.Location = new System.Drawing.Point(188, 326);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 23);
             this.btnagregar.TabIndex = 19;
@@ -272,7 +273,7 @@
             // 
             // btnmodificar
             // 
-            this.btnmodificar.Location = new System.Drawing.Point(164, 289);
+            this.btnmodificar.Location = new System.Drawing.Point(350, 326);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(75, 23);
             this.btnmodificar.TabIndex = 21;
@@ -281,7 +282,7 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(444, 286);
+            this.btneliminar.Location = new System.Drawing.Point(500, 326);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(75, 23);
             this.btneliminar.TabIndex = 22;
@@ -310,11 +311,21 @@
             this.rbdclientejuridico.Text = "cliente juridico";
             this.rbdclientejuridico.UseVisualStyleBackColor = true;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(900, 353);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 25;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // GestionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 404);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.rbdclientejuridico);
             this.Controls.Add(this.rdbclientenatural);
             this.Controls.Add(this.btneliminar);
@@ -381,5 +392,6 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.RadioButton rdbclientenatural;
         private System.Windows.Forms.RadioButton rbdclientejuridico;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

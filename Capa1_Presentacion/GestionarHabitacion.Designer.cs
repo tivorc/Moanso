@@ -265,13 +265,14 @@
             this.cbPiso.Name = "cbPiso";
             this.cbPiso.Size = new System.Drawing.Size(121, 21);
             this.cbPiso.TabIndex = 28;
+            this.cbPiso.SelectedIndexChanged += new System.EventHandler(this.cbPiso_SelectedIndexChanged);
             // 
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            "Disponible",
-            "Ocupado"});
+            "D",
+            "O"});
             this.cbEstado.Location = new System.Drawing.Point(960, 121);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(121, 21);

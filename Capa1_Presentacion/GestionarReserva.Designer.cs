@@ -46,12 +46,12 @@
             this.txtidreserva = new System.Windows.Forms.TextBox();
             this.txtfechainicio = new System.Windows.Forms.TextBox();
             this.txtfechafin = new System.Windows.Forms.TextBox();
-            this.txtestado = new System.Windows.Forms.TextBox();
-            this.txttiporeserva = new System.Windows.Forms.TextBox();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.lblhabitacion = new System.Windows.Forms.Label();
             this.txthabitacion = new System.Windows.Forms.TextBox();
             this.btnseleccionar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblreserva)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +101,7 @@
             this.apellido_materno});
             this.tblreserva.Location = new System.Drawing.Point(72, 317);
             this.tblreserva.Name = "tblreserva";
-            this.tblreserva.Size = new System.Drawing.Size(445, 150);
+            this.tblreserva.Size = new System.Drawing.Size(442, 150);
             this.tblreserva.TabIndex = 4;
             // 
             // Numerodocumento
@@ -129,18 +129,18 @@
             this.lblidreserva.AutoSize = true;
             this.lblidreserva.Location = new System.Drawing.Point(69, 42);
             this.lblidreserva.Name = "lblidreserva";
-            this.lblidreserva.Size = new System.Drawing.Size(53, 13);
+            this.lblidreserva.Size = new System.Drawing.Size(64, 13);
             this.lblidreserva.TabIndex = 5;
-            this.lblidreserva.Text = "id reserva";
+            this.lblidreserva.Text = "ID Reserva:";
             // 
             // lblfechainicio
             // 
             this.lblfechainicio.AutoSize = true;
             this.lblfechainicio.Location = new System.Drawing.Point(66, 97);
             this.lblfechainicio.Name = "lblfechainicio";
-            this.lblfechainicio.Size = new System.Drawing.Size(61, 13);
+            this.lblfechainicio.Size = new System.Drawing.Size(68, 13);
             this.lblfechainicio.TabIndex = 6;
-            this.lblfechainicio.Text = "fecha inicio";
+            this.lblfechainicio.Text = "Fecha Inicio:";
             this.lblfechainicio.Click += new System.EventHandler(this.lblfechainicio_Click);
             // 
             // lblfechafin
@@ -148,27 +148,27 @@
             this.lblfechafin.AutoSize = true;
             this.lblfechafin.Location = new System.Drawing.Point(69, 159);
             this.lblfechafin.Name = "lblfechafin";
-            this.lblfechafin.Size = new System.Drawing.Size(48, 13);
+            this.lblfechafin.Size = new System.Drawing.Size(57, 13);
             this.lblfechafin.TabIndex = 7;
-            this.lblfechafin.Text = "fecha fin";
+            this.lblfechafin.Text = "Fecha Fin:";
             // 
             // lblestado
             // 
             this.lblestado.AutoSize = true;
             this.lblestado.Location = new System.Drawing.Point(277, 42);
             this.lblestado.Name = "lblestado";
-            this.lblestado.Size = new System.Drawing.Size(39, 13);
+            this.lblestado.Size = new System.Drawing.Size(43, 13);
             this.lblestado.TabIndex = 8;
-            this.lblestado.Text = "estado";
+            this.lblestado.Text = "Estado:";
             // 
             // lbltiporeserva
             // 
             this.lbltiporeserva.AutoSize = true;
-            this.lbltiporeserva.Location = new System.Drawing.Point(275, 104);
+            this.lbltiporeserva.Location = new System.Drawing.Point(275, 97);
             this.lbltiporeserva.Name = "lbltiporeserva";
-            this.lbltiporeserva.Size = new System.Drawing.Size(71, 13);
+            this.lbltiporeserva.Size = new System.Drawing.Size(74, 13);
             this.lbltiporeserva.TabIndex = 9;
-            this.lbltiporeserva.Text = "Tipo Reserva";
+            this.lbltiporeserva.Text = "Tipo Reserva:";
             // 
             // lblprecio
             // 
@@ -201,25 +201,11 @@
             this.txtfechafin.Size = new System.Drawing.Size(100, 20);
             this.txtfechafin.TabIndex = 13;
             // 
-            // txtestado
-            // 
-            this.txtestado.Location = new System.Drawing.Point(354, 42);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(100, 20);
-            this.txtestado.TabIndex = 14;
-            // 
-            // txttiporeserva
-            // 
-            this.txttiporeserva.Location = new System.Drawing.Point(354, 104);
-            this.txttiporeserva.Name = "txttiporeserva";
-            this.txttiporeserva.Size = new System.Drawing.Size(100, 20);
-            this.txttiporeserva.TabIndex = 15;
-            // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(354, 163);
+            this.txtprecio.Location = new System.Drawing.Point(354, 156);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(100, 20);
+            this.txtprecio.Size = new System.Drawing.Size(121, 20);
             this.txtprecio.TabIndex = 16;
             // 
             // lblhabitacion
@@ -227,9 +213,9 @@
             this.lblhabitacion.AutoSize = true;
             this.lblhabitacion.Location = new System.Drawing.Point(66, 221);
             this.lblhabitacion.Name = "lblhabitacion";
-            this.lblhabitacion.Size = new System.Drawing.Size(58, 13);
+            this.lblhabitacion.Size = new System.Drawing.Size(61, 13);
             this.lblhabitacion.TabIndex = 17;
-            this.lblhabitacion.Text = "Habitacion";
+            this.lblhabitacion.Text = "Habitación:";
             // 
             // txthabitacion
             // 
@@ -247,17 +233,33 @@
             this.btnseleccionar.Text = "seleccionar";
             this.btnseleccionar.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(354, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(354, 97);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 21;
+            // 
             // GestionarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 531);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnseleccionar);
             this.Controls.Add(this.txthabitacion);
             this.Controls.Add(this.lblhabitacion);
             this.Controls.Add(this.txtprecio);
-            this.Controls.Add(this.txttiporeserva);
-            this.Controls.Add(this.txtestado);
             this.Controls.Add(this.txtfechafin);
             this.Controls.Add(this.txtfechainicio);
             this.Controls.Add(this.txtidreserva);
@@ -300,11 +302,11 @@
         private System.Windows.Forms.TextBox txtidreserva;
         private System.Windows.Forms.TextBox txtfechainicio;
         private System.Windows.Forms.TextBox txtfechafin;
-        private System.Windows.Forms.TextBox txtestado;
-        private System.Windows.Forms.TextBox txttiporeserva;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label lblhabitacion;
         private System.Windows.Forms.TextBox txthabitacion;
         private System.Windows.Forms.Button btnseleccionar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

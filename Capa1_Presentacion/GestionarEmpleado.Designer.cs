@@ -116,6 +116,7 @@
             this.btnAgregarEmpleado.TabIndex = 1;
             this.btnAgregarEmpleado.Text = "Agregar";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // btnModificarEmpleado
             // 

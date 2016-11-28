@@ -15,6 +15,7 @@ namespace Capa1_Presentacion
         public GestionarCliente()
         {
             InitializeComponent();
+            deshabilitar();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,7 +30,35 @@ namespace Capa1_Presentacion
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            habilitar();
+        }
+        public void deshabilitar()
+        {
+            txtnumerodocumento.Enabled = false;
+            txtnombre.Enabled = false;
+            txtapellidopaterno.Enabled = false;
+            txtapellidomaterno.Enabled = false;
+            txtdireccion.Enabled = false;
+            txttelefono.Enabled = false;
+            rdbclientenatural.Enabled = false;
+            rbdclientejuridico.Enabled = false;
+            txtruc.Enabled = false;
+            txtrazonsocial.Enabled = false;
             
+        }
+
+        public void habilitar()
+        {
+            txtnumerodocumento.Enabled = true;
+            txtnombre.Enabled = true;
+            txtapellidopaterno.Enabled = true;
+            txtapellidomaterno.Enabled = true;
+            txtdireccion.Enabled = true;
+            txttelefono.Enabled = true;
+            rdbclientenatural.Enabled = true;
+            rbdclientejuridico.Enabled = true;
+            txtruc.Enabled = true;
+            txtrazonsocial.Enabled = true;
         }
     }
 }
