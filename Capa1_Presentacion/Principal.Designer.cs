@@ -64,6 +64,7 @@
             this.btnEmpleado.Size = new System.Drawing.Size(85, 86);
             this.btnEmpleado.TabIndex = 2;
             this.btnEmpleado.UseVisualStyleBackColor = true;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
             // btnReserva
             // 
@@ -84,6 +85,7 @@
             this.btnPago.Size = new System.Drawing.Size(81, 81);
             this.btnPago.TabIndex = 4;
             this.btnPago.UseVisualStyleBackColor = false;
+            this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
             // 
             // btnSalir
             // 

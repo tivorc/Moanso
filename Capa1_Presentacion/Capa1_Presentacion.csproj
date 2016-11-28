@@ -52,6 +52,18 @@
     <Compile Include="GestionarCliente.Designer.cs">
       <DependentUpon>GestionarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarEmpleado.Designer.cs">
+      <DependentUpon>GestionarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPago.Designer.cs">
+      <DependentUpon>GestionarPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GestionarCliente.resx">
       <DependentUpon>GestionarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionarEmpleado.resx">
+      <DependentUpon>GestionarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarHabitacion.resx">
       <DependentUpon>GestionarHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarPago.resx">
+      <DependentUpon>GestionarPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarReserva.resx">
       <DependentUpon>GestionarReserva.cs</DependentUpon>
