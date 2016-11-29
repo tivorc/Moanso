@@ -35,6 +35,7 @@
             this.btnReserva = new System.Windows.Forms.Button();
             this.btnPago = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnReporte
@@ -97,12 +98,23 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(321, 198);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ME";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(439, 322);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPago);
             this.Controls.Add(this.btnReserva);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Button btnPago;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button button1;
     }
 }
