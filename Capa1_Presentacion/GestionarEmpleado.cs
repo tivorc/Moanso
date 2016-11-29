@@ -11,17 +11,21 @@ using System.Windows.Forms;
 
 namespace Capa1_Presentacion
 {
+   
     public partial class GestionarEmpleado : Form
     {
+        
         public GestionarEmpleado()
         {
             InitializeComponent();
             deshabilitar();
+            
+            
         }
 
         private void GestionarEmpleado_Load(object sender, EventArgs e)
         {
-
+            
         }
         private void deshabilitar()
         {
@@ -34,6 +38,8 @@ namespace Capa1_Presentacion
             txtUsuario.Enabled = false;
             txtContraseña.Enabled = false;
             cbTipoDocumento.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnCancelar.Enabled = false;
         }
         private void habilitar()
         {
@@ -46,11 +52,20 @@ namespace Capa1_Presentacion
             txtUsuario.Enabled = true;
             txtContraseña.Enabled = true;
             cbTipoDocumento.Enabled = true;
+            btnGuardar.Enabled = true;
+            btnCancelar.Enabled = true;
         }
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
         {
             habilitar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+            this.Hide();            
         }
     }
 }

@@ -73,7 +73,9 @@ namespace Capa1_Presentacion
             txtNumeroHabitacion.Enabled = false;
             cbTipo.Enabled = false;
             txtPrecio.Enabled = false;
-            cbEstado.Enabled = false; 
+            cbEstado.Enabled = false;
+            btnGuardarHabitacion.Enabled = false;
+            btnCancelarHabitacion.Enabled = false;
         }
 
         private void Habilitar()
@@ -83,6 +85,8 @@ namespace Capa1_Presentacion
             cbTipo.Enabled = true;
             txtPrecio.Enabled = true;
             cbEstado.Enabled = true;
+            btnGuardarHabitacion.Enabled = true;
+            btnCancelarHabitacion.Enabled = true;
         }
 
         private void btnAgregarHabitacion_Click(object sender, EventArgs e)
@@ -98,6 +102,13 @@ namespace Capa1_Presentacion
         private void tablaHabitacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+            this.Hide();
         }
     }
 }

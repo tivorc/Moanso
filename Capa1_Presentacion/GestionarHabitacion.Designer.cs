@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarHabitacion));
             this.lblIDHabitacion = new System.Windows.Forms.Label();
             this.txtIDHabitacion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -37,18 +38,19 @@
             this.btnGuardarHabitacion = new System.Windows.Forms.Button();
             this.btnCancelarHabitacion = new System.Windows.Forms.Button();
             this.tablaHabitacion = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblestado = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
             this.txtNumeroHabitacion = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             // btnAgregarHabitacion
             // 
-            this.btnAgregarHabitacion.Location = new System.Drawing.Point(86, 358);
+            this.btnAgregarHabitacion.Location = new System.Drawing.Point(121, 358);
             this.btnAgregarHabitacion.Name = "btnAgregarHabitacion";
             this.btnAgregarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarHabitacion.TabIndex = 13;
@@ -88,7 +90,7 @@
             // 
             // btnModificarHabitacion
             // 
-            this.btnModificarHabitacion.Location = new System.Drawing.Point(245, 358);
+            this.btnModificarHabitacion.Location = new System.Drawing.Point(259, 358);
             this.btnModificarHabitacion.Name = "btnModificarHabitacion";
             this.btnModificarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnModificarHabitacion.TabIndex = 14;
@@ -97,7 +99,7 @@
             // 
             // btnEliminarHabitacion
             // 
-            this.btnEliminarHabitacion.Location = new System.Drawing.Point(397, 358);
+            this.btnEliminarHabitacion.Location = new System.Drawing.Point(380, 358);
             this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
             this.btnEliminarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarHabitacion.TabIndex = 15;
@@ -131,11 +133,36 @@
             this.TipoHabitacion,
             this.Precio,
             this.Estado});
-            this.tablaHabitacion.Location = new System.Drawing.Point(1, 12);
+            this.tablaHabitacion.Location = new System.Drawing.Point(41, 53);
             this.tablaHabitacion.Name = "tablaHabitacion";
             this.tablaHabitacion.Size = new System.Drawing.Size(537, 294);
             this.tablaHabitacion.TabIndex = 18;
             this.tablaHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaHabitacion_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Numero";
+            this.Numero.Name = "Numero";
+            // 
+            // TipoHabitacion
+            // 
+            this.TipoHabitacion.HeaderText = "Tipo Habitacion";
+            this.TipoHabitacion.Name = "TipoHabitacion";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // lblestado
             // 
@@ -191,31 +218,6 @@
             this.cbEstado.Size = new System.Drawing.Size(121, 21);
             this.cbEstado.TabIndex = 29;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "Numero";
-            this.Numero.Name = "Numero";
-            // 
-            // TipoHabitacion
-            // 
-            this.TipoHabitacion.HeaderText = "Tipo Habitacion";
-            this.TipoHabitacion.Name = "TipoHabitacion";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
@@ -228,11 +230,22 @@
             this.cbTipo.Size = new System.Drawing.Size(121, 21);
             this.cbTipo.TabIndex = 30;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
+            this.btnVolver.Location = new System.Drawing.Point(41, 12);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(46, 23);
+            this.btnVolver.TabIndex = 31;
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // GestionarHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 407);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.txtNumeroHabitacion);
@@ -280,5 +293,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarEmpleado));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregarEmpleado = new System.Windows.Forms.Button();
             this.btnModificarEmpleado = new System.Windows.Forms.Button();
@@ -58,6 +59,8 @@
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTipoDocumento = new System.Windows.Forms.Label();
             this.cbTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +81,7 @@
             // 
             // btnAgregarEmpleado
             // 
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(181, 251);
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(195, 251);
             this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
             this.btnAgregarEmpleado.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarEmpleado.TabIndex = 1;
@@ -88,7 +91,7 @@
             // 
             // btnModificarEmpleado
             // 
-            this.btnModificarEmpleado.Location = new System.Drawing.Point(364, 251);
+            this.btnModificarEmpleado.Location = new System.Drawing.Point(369, 251);
             this.btnModificarEmpleado.Name = "btnModificarEmpleado";
             this.btnModificarEmpleado.Size = new System.Drawing.Size(75, 23);
             this.btnModificarEmpleado.TabIndex = 2;
@@ -305,11 +308,22 @@
             this.cbTipoDocumento.Size = new System.Drawing.Size(121, 21);
             this.cbTipoDocumento.TabIndex = 27;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
+            this.btnVolver.Location = new System.Drawing.Point(47, 12);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(46, 21);
+            this.btnVolver.TabIndex = 28;
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GestionarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1311, 312);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cbTipoDocumento);
             this.Controls.Add(this.lblTipoDocumento);
             this.Controls.Add(this.btnCancelar);
@@ -375,5 +389,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
         private System.Windows.Forms.Label lblTipoDocumento;
         private System.Windows.Forms.ComboBox cbTipoDocumento;
+        private System.Windows.Forms.Button btnVolver;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

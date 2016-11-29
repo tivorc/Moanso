@@ -16,7 +16,7 @@ namespace Capa1_Presentacion
         GestionarEmpleado gestionarEmpleado = new GestionarEmpleado();
         GestionarReserva gestionarReserva = new GestionarReserva();
         GestionarPago gestionarPago = new GestionarPago();
-        TipoHabitacion tipoHabitacion = new TipoHabitacion();
+        
         public Principal()
         {
             InitializeComponent();
@@ -53,8 +53,7 @@ namespace Capa1_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tipoHabitacion.Show();
-            this.Hide();
+           
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
