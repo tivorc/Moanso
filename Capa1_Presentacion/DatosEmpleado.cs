@@ -39,7 +39,7 @@ namespace Capa1_Presentacion
             empleado.Tipo_documento = comboboxTipoDocumento.Text.Trim();
             if (empleado.Numero_documento.Length == 0 || empleado.Tipo_empleado.Length == 0)
             {
-                MessageBox.Show(this, "Debe ingresar al menos el numero de habitacion y el tipo de habitaciones", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(this, "Debe ingresar al menos el numero de documento y el tipo empleado", "HOTEL ISIS: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtNumeroDocumento.Focus();
                 return;
             }
@@ -50,23 +50,23 @@ namespace Capa1_Presentacion
                 {
                     registros_afectados = gestionarEmpleadoServicio.guardarEmpleado(empleado);
                     if (registros_afectados == 1)
-                        MessageBox.Show("La Habitacion fue creado.", "AquariumSoft: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El empleado fue creado.", "HOTEL ISIS: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("La Habitacion no pudo ser creado, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("El empleado no pudo ser creado, verifique.", "HOTEL ISIS: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
                     registros_afectados = gestionarEmpleadoServicio.modificarEmpleado(empleado);
                     if (registros_afectados == 1)
-                        MessageBox.Show("La Habitacion fue modificado.", "AquariumSoft: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El empleado fue modificado.", "HOTEL ISIS: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("La Habitacion seleccionado no existe, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("El empleado seleccionado no existe, verifique.", "HOTEL ISIS: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 // Close();
             }
             catch (Exception err)
             {
-                MessageBox.Show(this, "Ocurrio un problema al guardar La Habitacion. \n\nIntente de nuevo o verifique con el Administrador.", "AquariumSoft: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Ocurrio un problema al guardar El empleado. \n\nIntente de nuevo o verifique con el Administrador.", "HOTEL ISIS: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

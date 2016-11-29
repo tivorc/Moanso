@@ -170,6 +170,9 @@
             // comboboxTipoEmpleado
             // 
             this.comboboxTipoEmpleado.FormattingEnabled = true;
+            this.comboboxTipoEmpleado.Items.AddRange(new object[] {
+            "Administrador",
+            "Estandar"});
             this.comboboxTipoEmpleado.Location = new System.Drawing.Point(363, 44);
             this.comboboxTipoEmpleado.Name = "comboboxTipoEmpleado";
             this.comboboxTipoEmpleado.Size = new System.Drawing.Size(121, 21);
@@ -192,6 +195,10 @@
             // comboboxTipoDocumento
             // 
             this.comboboxTipoDocumento.FormattingEnabled = true;
+            this.comboboxTipoDocumento.Items.AddRange(new object[] {
+            "DNI",
+            "CE",
+            "P"});
             this.comboboxTipoDocumento.Location = new System.Drawing.Point(363, 142);
             this.comboboxTipoDocumento.Name = "comboboxTipoDocumento";
             this.comboboxTipoDocumento.Size = new System.Drawing.Size(121, 21);
