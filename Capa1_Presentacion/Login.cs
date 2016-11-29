@@ -20,8 +20,27 @@ namespace Capa1_Presentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            principal.Show();
-            this.Hide();
+            Principal principal = new Principal();
+            string usuario;
+            string password;
+            usuario = txtUsuario.Text;
+            password = txtContraseña.Text;
+            if (usuario.Equals("LUngur") && password.Equals("hotelisis"))
+            {
+                MessageBox.Show(this, "Bienvenido","HOTEL ISIS",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Hide();
+                principal.Show();
+
+            }
+            else
+            {
+                MessageBox.Show(this, "Datos incorrectos","ALERTA",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
         }
     }
 }
