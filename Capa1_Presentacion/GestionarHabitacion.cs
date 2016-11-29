@@ -25,6 +25,7 @@ namespace Capa1_Presentacion
             InitializeComponent();
             tipoAccion = ACCION_CREAR;
             this.habitacion = new Habitacion();
+            Deshabilitar();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
