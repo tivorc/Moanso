@@ -66,6 +66,7 @@ namespace Capa4_Persistencia
                     cliente.Numero_documento = resultado.GetString(1);
                     cliente.Nombre = resultado.GetString(2);
                     cliente.Apellidos = resultado.GetString(3);
+                    cliente.Tipo_documento = resultado.GetString(4);
                 }
                 resultado.Close();
                 return cliente;

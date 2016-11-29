@@ -8,10 +8,10 @@ using Capa3_Dominio;
 
 namespace Capa4_Persistencia
 {
-    public class ReservaDAO
+    class ComprobanteDePagoDAO
     {
         private GestorDAOSQL gestorDAOSQL;
-        public ReservaDAO(GestorDAOSQL gestorDAOSQL)
+        public ComprobanteDePagoDAO(GestorDAOSQL gestorDAOSQL)
         {
             this.gestorDAOSQL = gestorDAOSQL;
         }
