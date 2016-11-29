@@ -88,7 +88,7 @@ namespace Capa1_Presentacion
             habitacion.Numero = txtNumeroHabitacion.Text.Trim();
             habitacion.Tipo_habitacion = comboboxTipo.Text.Trim();
             habitacion.Precio = double.Parse(txtPrecio.Text.Trim());
-            habitacion.Estado = comboboxEstado.SelectedText.Trim();
+            habitacion.Estado = comboboxEstado.Text.Trim();
 
             // se compara la longitud de las cadenas que son obligatorias
             if (habitacion.Numero.Length == 0 || habitacion.Tipo_habitacion.Length == 0)
@@ -116,7 +116,7 @@ namespace Capa1_Presentacion
                     else
                         MessageBox.Show("La Habitacion seleccionado no existe, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                Close();
+               // Close();
             }
             catch (Exception err)
             {
