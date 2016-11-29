@@ -72,7 +72,7 @@ namespace Capa1_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Habilitar();
         }
         public DatosEmpleado(Empleado empleado)
         {
@@ -102,7 +102,7 @@ namespace Capa1_Presentacion
 
         private void Habilitar()
         {
-            // txtIDHabitacion.Enabled = true;
+           // txtID.Enabled = true;
             txtNumeroDocumento.Enabled = true;
             txtNombre.Enabled = true;
             txtApellidos.Enabled = true;
