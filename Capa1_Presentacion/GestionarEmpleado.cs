@@ -28,26 +28,24 @@ namespace Capa1_Presentacion
             txtId.Enabled = false;
             txtNumeroDocumento.Enabled = false;
             txtNombre.Enabled = false;
-            txtApellidoPaterno.Enabled = false;
-            txtApellidoMaterno.Enabled = false;
-            txtDireccion.Enabled = false;
+            txtApellidos.Enabled = false;
             txtTelefono.Enabled = false;
             cbTipoEmpleado.Enabled = false;
             txtUsuario.Enabled = false;
             txtContraseña.Enabled = false;
+            cbTipoDocumento.Enabled = false;
         }
         private void habilitar()
         {
             txtId.Enabled = true;
             txtNumeroDocumento.Enabled = true;
             txtNombre.Enabled = true;
-            txtApellidoPaterno.Enabled = true;
-            txtApellidoMaterno.Enabled = true;
-            txtDireccion.Enabled = true;
+            txtApellidos.Enabled = true;
             txtTelefono.Enabled = true;
             cbTipoEmpleado.Enabled = true;
             txtUsuario.Enabled = true;
             txtContraseña.Enabled = true;
+            cbTipoDocumento.Enabled = true;
         }
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
