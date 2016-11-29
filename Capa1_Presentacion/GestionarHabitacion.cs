@@ -59,7 +59,7 @@ namespace Capa1_Presentacion
 
         private void Habilitar()
         {
-            txtIDHabitacion.Enabled = false;
+           // txtIDHabitacion.Enabled = true;
             txtNumeroHabitacion.Enabled = true;
             comboboxTipo.Enabled = true;
             txtPrecio.Enabled = true;
@@ -127,47 +127,22 @@ namespace Capa1_Presentacion
 
         }
 
-        /*private void btnGuardarHabitacion_Click(object sender, EventArgs e)
+        private void GestionarHabitacion_FormClosing(object sender, FormClosingEventArgs e)
         {
-            int registros_afectados;
-            habitacion.Numero = txtNumeroHabitacion.Text.Trim();
-            habitacion.Tipo_habitacion = comboboxTipo.SelectedText.Trim();
-            habitacion.Precio = double.Parse(txtPrecio.Text.Trim());
-            habitacion.Estado = comboboxEstado.SelectedText.Trim();
+            Application.Exit();
+        }
 
-            if (habitacion.Numero.Length == 0 || habitacion.Tipo_habitacion.Length == 0)
-            {
-                MessageBox.Show(this, "Debe ingresar al menos el numero de habitacion y el tipo de habitacion", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtNumeroHabitacion.Focus();
-                return;
-            }
-            try
-            {
-                GestionarHabitacionServicio gestionarHabitacionServicio = new GestionarHabitacionServicio();
-                if (tipoAccion == ACCION_CREAR)
-                {
-                    registros_afectados = gestionarHabitacionServicio.guardarHabitacion(habitacion);
-                    if (registros_afectados == 1)
-                        MessageBox.Show("La Habitacion fue creado.", "AquariumSoft: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        MessageBox.Show("La Habitacion no pudo ser creado, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    registros_afectados = gestionarHabitacionServicio.modificarHabitacion(habitacion);
-                    if (registros_afectados == 1)
-                        MessageBox.Show("La Habitacion fue modificado.", "AquariumSoft: Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        MessageBox.Show("La Habitacion seleccionado no existe, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                Close();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(this, "Ocurrio un problema al guardar La Habitacion. \n\nIntente de nuevo o verifique con el Administrador.", "AquariumSoft: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
+        private void iniciarConsulta()
+        {
+            //ejecutarConsulta("");
+            //texNombre.Text = "";
+            txtNumeroHabitacion.Focus();
+        }
 
+        private void FormGestionarHabitacion_Shown(object sender, EventArgs e)
+        {
+            iniciarConsulta();
+        }
 
     }
 }
