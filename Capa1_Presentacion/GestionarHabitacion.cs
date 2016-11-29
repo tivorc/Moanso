@@ -69,24 +69,20 @@ namespace Capa1_Presentacion
         */
         private void Deshabilitar()
         {
-            txtnumero.Enabled = false;
-            cbPiso.Enabled = false;
-            cbEstado.Enabled = false;
-            txtnombre.Enabled = false;
-            txtdescripcion.Enabled = false;
-            txtPreciohora.Enabled = false;
-            txtpreciodia.Enabled = false;
+            txtIDHabitacion.Enabled = false;
+            txtNumeroHabitacion.Enabled = false;
+            cbTipo.Enabled = false;
+            txtPrecio.Enabled = false;
+            cbEstado.Enabled = false; 
         }
 
         private void Habilitar()
         {
-            txtnumero.Enabled = true;
-            cbPiso.Enabled = true;
+            txtIDHabitacion.Enabled = true;
+            txtNumeroHabitacion.Enabled = true;
+            cbTipo.Enabled = true;
+            txtPrecio.Enabled = true;
             cbEstado.Enabled = true;
-            txtnombre.Enabled = true;
-            txtdescripcion.Enabled = true;
-            txtPreciohora.Enabled = true;
-            txtpreciodia.Enabled = true;
         }
 
         private void btnAgregarHabitacion_Click(object sender, EventArgs e)
@@ -95,6 +91,11 @@ namespace Capa1_Presentacion
         }
 
         private void cbPiso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tablaHabitacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
