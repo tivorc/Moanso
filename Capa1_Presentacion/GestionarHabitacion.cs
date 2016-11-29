@@ -17,8 +17,8 @@ namespace Capa1_Presentacion
         public GestionarHabitacion()
         {
             InitializeComponent();
-            ejecutarConsulta();
-            Deshabilitar();
+           // ejecutarConsulta();
+            //Deshabilitar();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
