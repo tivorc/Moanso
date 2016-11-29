@@ -23,19 +23,19 @@ namespace Capa2_Aplicacion
         {
             try
             {
-                int registros_afectados=0;
+                int registros_afectados = 0;
                 gestorDAOSQL.abrirConexion();
                 registros_afectados = habitacionDAO.guardarHabitacion(habitacion);
                 gestorDAOSQL.cerrarConexion();
                 return registros_afectados;
             }
-            
+
             catch (Exception e)
             {
 
                 throw e;
             }
-            
+
         }
         public int modificarHabitacion(Habitacion habitacion)
         {
@@ -54,11 +54,28 @@ namespace Capa2_Aplicacion
             }
 
         }
+        public int eliminarHabitacion(Habitacion habitacion)
+        {
+            try
+            {
+                int registros_afectados;
+                gestorDAOSQL.abrirConexion();
+                registros_afectados = habitacionDAO.eliminarHabitacion(habitacion);
+                gestorDAOSQL.cerrarConexion();
+                return registros_afectados;
 
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
         public List<Habitacion> MostrarHabitacionesDisponibles()
         {
             try
             {
+
                 gestorDAOSQL.abrirConexion();
                 List<Habitacion> listarHabitacionesDisponibles = habitacionDAO.listarHabitacionesDisponibles();
                 gestorDAOSQL.cerrarConexion();
@@ -84,6 +101,11 @@ namespace Capa2_Aplicacion
             }
         }
 
+
+
     }
-    
+
+   
+
 }
+    

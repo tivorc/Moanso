@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarHabitacion));
             this.lblIDHabitacion = new System.Windows.Forms.Label();
             this.txtIDHabitacion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -48,9 +47,8 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
             this.txtNumeroHabitacion = new System.Windows.Forms.TextBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.btnVolver = new System.Windows.Forms.Button();
+            this.comboboxEstado = new System.Windows.Forms.ComboBox();
+            this.comboboxTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +78,7 @@
             // 
             // btnAgregarHabitacion
             // 
-            this.btnAgregarHabitacion.Location = new System.Drawing.Point(121, 358);
+            this.btnAgregarHabitacion.Location = new System.Drawing.Point(86, 358);
             this.btnAgregarHabitacion.Name = "btnAgregarHabitacion";
             this.btnAgregarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarHabitacion.TabIndex = 13;
@@ -90,7 +88,7 @@
             // 
             // btnModificarHabitacion
             // 
-            this.btnModificarHabitacion.Location = new System.Drawing.Point(259, 358);
+            this.btnModificarHabitacion.Location = new System.Drawing.Point(245, 358);
             this.btnModificarHabitacion.Name = "btnModificarHabitacion";
             this.btnModificarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnModificarHabitacion.TabIndex = 14;
@@ -99,7 +97,7 @@
             // 
             // btnEliminarHabitacion
             // 
-            this.btnEliminarHabitacion.Location = new System.Drawing.Point(380, 358);
+            this.btnEliminarHabitacion.Location = new System.Drawing.Point(397, 358);
             this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
             this.btnEliminarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarHabitacion.TabIndex = 15;
@@ -114,6 +112,7 @@
             this.btnGuardarHabitacion.TabIndex = 16;
             this.btnGuardarHabitacion.Text = "Guardar";
             this.btnGuardarHabitacion.UseVisualStyleBackColor = true;
+            this.btnGuardarHabitacion.Click += new System.EventHandler(this.btnGuardarHabitacion_Click);
             // 
             // btnCancelarHabitacion
             // 
@@ -133,7 +132,7 @@
             this.TipoHabitacion,
             this.Precio,
             this.Estado});
-            this.tablaHabitacion.Location = new System.Drawing.Point(41, 53);
+            this.tablaHabitacion.Location = new System.Drawing.Point(1, 12);
             this.tablaHabitacion.Name = "tablaHabitacion";
             this.tablaHabitacion.Size = new System.Drawing.Size(537, 294);
             this.tablaHabitacion.TabIndex = 18;
@@ -207,47 +206,36 @@
             this.txtNumeroHabitacion.Size = new System.Drawing.Size(121, 20);
             this.txtNumeroHabitacion.TabIndex = 26;
             // 
-            // cbEstado
+            // comboboxEstado
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
+            this.comboboxEstado.FormattingEnabled = true;
+            this.comboboxEstado.Items.AddRange(new object[] {
             "DISPONIBLE",
             "OCUPADO"});
-            this.cbEstado.Location = new System.Drawing.Point(727, 241);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(121, 21);
-            this.cbEstado.TabIndex = 29;
+            this.comboboxEstado.Location = new System.Drawing.Point(727, 241);
+            this.comboboxEstado.Name = "comboboxEstado";
+            this.comboboxEstado.Size = new System.Drawing.Size(121, 21);
+            this.comboboxEstado.TabIndex = 29;
             // 
-            // cbTipo
+            // comboboxTipo
             // 
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
+            this.comboboxTipo.FormattingEnabled = true;
+            this.comboboxTipo.Items.AddRange(new object[] {
             "INDIVIDUAL",
             "DOBLE",
             "MATRIMONIAL"});
-            this.cbTipo.Location = new System.Drawing.Point(727, 150);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 21);
-            this.cbTipo.TabIndex = 30;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(41, 12);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(46, 23);
-            this.btnVolver.TabIndex = 31;
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.comboboxTipo.Location = new System.Drawing.Point(727, 150);
+            this.comboboxTipo.Name = "comboboxTipo";
+            this.comboboxTipo.Size = new System.Drawing.Size(121, 21);
+            this.comboboxTipo.TabIndex = 30;
             // 
             // GestionarHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 407);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.cbTipo);
-            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.comboboxTipo);
+            this.Controls.Add(this.comboboxEstado);
             this.Controls.Add(this.txtNumeroHabitacion);
             this.Controls.Add(this.lblprecio);
             this.Controls.Add(this.lblNumero);
@@ -286,13 +274,12 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.TextBox txtNumeroHabitacion;
-        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox comboboxEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.ComboBox cbTipo;
-        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.ComboBox comboboxTipo;
     }
 }

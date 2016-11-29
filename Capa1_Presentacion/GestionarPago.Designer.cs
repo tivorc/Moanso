@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarPago));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID_Reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,8 +37,9 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.btnSeleccionarCliente = new System.Windows.Forms.Button();
+            this.RbBoleta = new System.Windows.Forms.RadioButton();
+            this.RbFactura = new System.Windows.Forms.RadioButton();
             this.btnGenerarComprobante = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.Fecha_Inicio,
             this.Fecha_Fin,
             this.Estado});
-            this.dataGridView1.Location = new System.Drawing.Point(44, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(441, 150);
             this.dataGridView1.TabIndex = 0;
@@ -84,12 +84,11 @@
             this.btnPagar.TabIndex = 2;
             this.btnPagar.Text = "Pagar";
             this.btnPagar.UseVisualStyleBackColor = true;
-            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(523, 56);
+            this.lblCliente.Location = new System.Drawing.Point(512, 26);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(61, 13);
             this.lblCliente.TabIndex = 3;
@@ -97,46 +96,59 @@
             // 
             // txtDniCliente
             // 
-            this.txtDniCliente.Location = new System.Drawing.Point(600, 53);
+            this.txtDniCliente.Location = new System.Drawing.Point(579, 26);
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(100, 20);
             this.txtDniCliente.TabIndex = 4;
             // 
             // btnSeleccionarCliente
             // 
-            this.btnSeleccionarCliente.Location = new System.Drawing.Point(720, 51);
+            this.btnSeleccionarCliente.Location = new System.Drawing.Point(702, 22);
             this.btnSeleccionarCliente.Name = "btnSeleccionarCliente";
             this.btnSeleccionarCliente.Size = new System.Drawing.Size(75, 23);
             this.btnSeleccionarCliente.TabIndex = 5;
             this.btnSeleccionarCliente.Text = "Seleccionar";
             this.btnSeleccionarCliente.UseVisualStyleBackColor = true;
             // 
+            // RbBoleta
+            // 
+            this.RbBoleta.AutoSize = true;
+            this.RbBoleta.Location = new System.Drawing.Point(579, 104);
+            this.RbBoleta.Name = "RbBoleta";
+            this.RbBoleta.Size = new System.Drawing.Size(55, 17);
+            this.RbBoleta.TabIndex = 6;
+            this.RbBoleta.TabStop = true;
+            this.RbBoleta.Text = "Boleta";
+            this.RbBoleta.UseVisualStyleBackColor = true;
+            // 
+            // RbFactura
+            // 
+            this.RbFactura.AutoSize = true;
+            this.RbFactura.Location = new System.Drawing.Point(687, 104);
+            this.RbFactura.Name = "RbFactura";
+            this.RbFactura.Size = new System.Drawing.Size(61, 17);
+            this.RbFactura.TabIndex = 7;
+            this.RbFactura.TabStop = true;
+            this.RbFactura.Text = "Factura";
+            this.RbFactura.UseVisualStyleBackColor = true;
+            // 
             // btnGenerarComprobante
             // 
-            this.btnGenerarComprobante.Location = new System.Drawing.Point(600, 139);
+            this.btnGenerarComprobante.Location = new System.Drawing.Point(603, 183);
             this.btnGenerarComprobante.Name = "btnGenerarComprobante";
             this.btnGenerarComprobante.Size = new System.Drawing.Size(128, 23);
             this.btnGenerarComprobante.TabIndex = 8;
             this.btnGenerarComprobante.Text = "Generar Comprobante";
             this.btnGenerarComprobante.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(44, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // GestionarPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 314);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGenerarComprobante);
+            this.Controls.Add(this.RbFactura);
+            this.Controls.Add(this.RbBoleta);
             this.Controls.Add(this.btnSeleccionarCliente);
             this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.lblCliente);
@@ -161,7 +173,8 @@
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtDniCliente;
         private System.Windows.Forms.Button btnSeleccionarCliente;
+        private System.Windows.Forms.RadioButton RbBoleta;
+        private System.Windows.Forms.RadioButton RbFactura;
         private System.Windows.Forms.Button btnGenerarComprobante;
-        private System.Windows.Forms.Button button1;
     }
 }
