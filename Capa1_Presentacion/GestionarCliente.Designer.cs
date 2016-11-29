@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tblclientes = new System.Windows.Forms.DataGridView();
+            this.tablaclientes = new System.Windows.Forms.DataGridView();
             this.id_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero_documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,13 +60,13 @@
             this.rdbclientenatural = new System.Windows.Forms.RadioButton();
             this.rbdclientejuridico = new System.Windows.Forms.RadioButton();
             this.btnGuardar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tblclientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaclientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // tblclientes
+            // tablaclientes
             // 
-            this.tblclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblclientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablaclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaclientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_cliente,
             this.numero_documento,
             this.nombre,
@@ -74,11 +74,11 @@
             this.apellido_materno,
             this.direccion,
             this.telefono});
-            this.tblclientes.Location = new System.Drawing.Point(0, 1);
-            this.tblclientes.Name = "tblclientes";
-            this.tblclientes.Size = new System.Drawing.Size(745, 279);
-            this.tblclientes.TabIndex = 0;
-            this.tblclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tablaclientes.Location = new System.Drawing.Point(0, 1);
+            this.tablaclientes.Name = "tablaclientes";
+            this.tablaclientes.Size = new System.Drawing.Size(745, 279);
+            this.tablaclientes.TabIndex = 0;
+            this.tablaclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // id_cliente
             // 
@@ -319,6 +319,7 @@
             this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // GestionarCliente
             // 
@@ -349,11 +350,11 @@
             this.Controls.Add(this.lblapellidopaterno);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.lblnumerodocumento);
-            this.Controls.Add(this.tblclientes);
+            this.Controls.Add(this.tablaclientes);
             this.Name = "GestionarCliente";
             this.Text = "GestionarCliente";
             this.Load += new System.EventHandler(this.GestionarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tblclientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaclientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,7 +362,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView tblclientes;
+        private System.Windows.Forms.DataGridView tablaclientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero_documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;

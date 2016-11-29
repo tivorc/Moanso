@@ -61,6 +61,24 @@ namespace Capa4_Persistencia
                 throw e;
             }
         }
+        public int mostrarHabitaciones(Habitacion habitacion)
+        {
+            int registros_afectados;
+            string sentenciaSQL= "SELECT numero, tipo_habitacion, precio, estado FROM Habitacion";
+            try
+            {
+                SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
+                asignarParametrosHabitacion(habitacion, comando);
+                registros_afectados = comando.ExecuteNonQuery();
+                return registros_afectados;
+            }
+            catch (Exception E)
+            {
+
+                throw E;
+            }
+
+        }
 
         public List<Habitacion> listarHabitaciones()
         {

@@ -14,7 +14,7 @@ namespace Capa1_Presentacion
 {
     public partial class GestionarHabitacion : Form
     {
-        
+
         Habitacion habitacion;
         private const int ACCION_CREAR = 1;
         private const int ACCION_MODIFICAR = 2;
@@ -27,6 +27,25 @@ namespace Capa1_Presentacion
             this.habitacion = new Habitacion();
             Deshabilitar();
         }
+        private void configurarColumnasDataGridView()
+        {
+            DataGridViewColumn columna0, columna1, columna2, columna3, columna4; // objetos columna
+            // modificar los encabezados de columnas de la tabla
+            columna0 = tablaHabitacion.Columns[0]; // se recupera la columna Id
+            columna0.Visible = false; // se oculta la columna
+            columna1 = tablaHabitacion.Columns[1]; // se recupera la columna nombre
+            columna1.HeaderText = "Numero"; // se asigna el encabezado de columna
+            columna1.Width = 200; // se asigna el ancho de la columna
+            columna2 = tablaHabitacion.Columns[2];
+            columna2.HeaderText = "Tipo de Habitacion";
+            columna2.Width = 80;
+            columna3 = tablaHabitacion.Columns[3];
+            columna3.HeaderText = "Precio";
+            columna3.Width = 200;
+            columna4 = tablaHabitacion.Columns[4];
+            columna4.HeaderText = "Estado";
+            columna4.Width = 200;
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -37,7 +56,7 @@ namespace Capa1_Presentacion
         {
 
         }
-        
+
         public GestionarHabitacion(Habitacion habitacion)
         {
             InitializeComponent();
@@ -59,7 +78,7 @@ namespace Capa1_Presentacion
 
         private void Habilitar()
         {
-           // txtIDHabitacion.Enabled = true;
+            // txtIDHabitacion.Enabled = true;
             txtNumeroHabitacion.Enabled = true;
             comboboxTipo.Enabled = true;
             txtPrecio.Enabled = true;
@@ -69,7 +88,7 @@ namespace Capa1_Presentacion
         private void btnAgregarHabitacion_Click(object sender, EventArgs e)
         {
             Habilitar();
-            
+
         }
 
         private void cbPiso_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,6 +100,7 @@ namespace Capa1_Presentacion
         {
 
         }
+        
 
         private void btnGuardarHabitacion_Click(object sender, EventArgs e)
         {
@@ -118,7 +138,7 @@ namespace Capa1_Presentacion
                     else
                         MessageBox.Show("La Habitacion seleccionado no existe, verifique.", "AquariumSoft: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-               // Close();
+                // Close();
             }
             catch (Exception err)
             {
@@ -131,10 +151,25 @@ namespace Capa1_Presentacion
         {
             Application.Exit();
         }
+        private void ejecutar()
+        {
+            try
+            {
+                GestionarHabitacionServicio gestionarHabitacionServicio = new GestionarHabitacionServicio();
+                List<Habitacion> listaHabitaciones = gestionarHabitacionServicio.MostrarHabitaciones();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(this, "Ocurrio un problema a ejecutar la consulta de las habitaciones. \n\nIntente de nuevo o verifique con el Administrador.", "Hostal Isis: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                throw err;
+            }
+
+        }
 
         private void iniciarConsulta()
         {
-            //ejecutarConsulta("");
+            ejecutar();
             //texNombre.Text = "";
             txtNumeroHabitacion.Focus();
         }
@@ -144,6 +179,10 @@ namespace Capa1_Presentacion
             iniciarConsulta();
         }
 
+        private void GestionarHabitacion_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
 
