@@ -18,7 +18,7 @@ namespace Capa1_Presentacion
         Cliente cliente;
         private const int ACCION_CREAR = 1;
         private const int ACCION_MODIFICAR = 2;
-        private int tipoAccion;
+        private int tipoAcciones;
 
         public GestionarCliente()
         {
