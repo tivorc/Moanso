@@ -56,5 +56,10 @@ namespace Capa1_Presentacion
             tipoHabitacion.Show();
             this.Hide();
         }
+
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

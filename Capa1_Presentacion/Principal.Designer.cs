@@ -123,6 +123,7 @@
             this.Controls.Add(this.btnReporte);
             this.Name = "Principal";
             this.Text = "Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.ResumeLayout(false);
 
         }
