@@ -25,7 +25,7 @@ namespace Capa1_Presentacion
             string password;
             usuario = txtUsuario.Text;
             password = txtContraseña.Text;
-            if (usuario.Equals("LUngur") && password.Equals("hotelisis"))
+            if (usuario.Equals("admin") && password.Equals("123"))
             {
                 MessageBox.Show(this, "Bienvenido","HOTEL ISIS",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Hide();
@@ -47,7 +47,7 @@ namespace Capa1_Presentacion
                 string password;
                 usuario = txtUsuario.Text;
                 password = txtContraseña.Text;
-                if (usuario.Equals("LUngur") && password.Equals("hotelisis"))
+                if (usuario.Equals("admin") && password.Equals("123"))
                 {
                     MessageBox.Show(this, "Bienvenido", "HOTEL ISIS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
