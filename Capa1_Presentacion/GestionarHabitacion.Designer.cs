@@ -78,7 +78,7 @@
             // 
             // btnAgregarHabitacion
             // 
-            this.btnAgregarHabitacion.Location = new System.Drawing.Point(163, 369);
+            this.btnAgregarHabitacion.Location = new System.Drawing.Point(86, 358);
             this.btnAgregarHabitacion.Name = "btnAgregarHabitacion";
             this.btnAgregarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarHabitacion.TabIndex = 13;
@@ -88,7 +88,7 @@
             // 
             // btnModificarHabitacion
             // 
-            this.btnModificarHabitacion.Location = new System.Drawing.Point(321, 369);
+            this.btnModificarHabitacion.Location = new System.Drawing.Point(245, 358);
             this.btnModificarHabitacion.Name = "btnModificarHabitacion";
             this.btnModificarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnModificarHabitacion.TabIndex = 14;
@@ -97,7 +97,7 @@
             // 
             // btnEliminarHabitacion
             // 
-            this.btnEliminarHabitacion.Location = new System.Drawing.Point(463, 369);
+            this.btnEliminarHabitacion.Location = new System.Drawing.Point(397, 358);
             this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
             this.btnEliminarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarHabitacion.TabIndex = 15;
@@ -106,7 +106,7 @@
             // 
             // btnGuardarHabitacion
             // 
-            this.btnGuardarHabitacion.Location = new System.Drawing.Point(668, 369);
+            this.btnGuardarHabitacion.Location = new System.Drawing.Point(667, 358);
             this.btnGuardarHabitacion.Name = "btnGuardarHabitacion";
             this.btnGuardarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarHabitacion.TabIndex = 16;
@@ -115,7 +115,7 @@
             // 
             // btnCancelarHabitacion
             // 
-            this.btnCancelarHabitacion.Location = new System.Drawing.Point(792, 369);
+            this.btnCancelarHabitacion.Location = new System.Drawing.Point(792, 358);
             this.btnCancelarHabitacion.Name = "btnCancelarHabitacion";
             this.btnCancelarHabitacion.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarHabitacion.TabIndex = 17;
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 475);
+            this.ClientSize = new System.Drawing.Size(897, 407);
             this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.txtNumeroHabitacion);
