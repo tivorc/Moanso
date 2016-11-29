@@ -17,10 +17,8 @@ namespace Capa1_Presentacion
         public GestionarHabitacion()
         {
             InitializeComponent();
+            ejecutarConsulta();
             Deshabilitar();
-            
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -32,7 +30,7 @@ namespace Capa1_Presentacion
         {
 
         }
-        private void ejecutarConsulta(string nombre)
+        private void ejecutarConsulta()
         {
             try
             {
@@ -54,9 +52,10 @@ namespace Capa1_Presentacion
             }
             catch (Exception err)
             {
-                MessageBox.Show(this, "Ocurrio un problema a ejecutar la consula de alumnos. \n\nIntente de nuevo o verifique con el Administrador.", "AquariumSof: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Ocurrio un problema a ejecutar la consula de alumnos. \n\nIntente de nuevo o verifique con el Administrador."+err.ToString(), "AquariumSof: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /*
         private void iniciarConsulta()
         {
             ejecutarConsulta("");
@@ -67,6 +66,7 @@ namespace Capa1_Presentacion
         {
             iniciarConsulta();
         }
+        */
         private void Deshabilitar()
         {
             txtnumero.Enabled = false;

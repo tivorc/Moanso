@@ -10,11 +10,8 @@ namespace Capa3_Dominio
     {
         public int Id_habitacion { get; set; }
         public string Numero { get; set; }
-        public string Piso { get; set; }
+        public string Tipo_habitacion { get; set; }
+        public double Precio { get; set; }
         public string Estado { get; set; }
-        public TipoHabitacion Tipo_habitacion { get; set; }
-
-        
-
     }
 }

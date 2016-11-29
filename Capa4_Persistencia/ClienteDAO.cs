@@ -19,9 +19,7 @@ namespace Capa4_Persistencia
         public int guardarCliente(Cliente cliente)
         {
             int registro_afectados;
-            string sentenciaSQL = "INSERT INTO Cliente(numero_documento, nombre, apellido_paterno, apellido_materno, direccion, " +
-                "telefono, tipo_cliente, ruc, razon_social, id_tipo_documento) VALUES(@numero_documento, @nombre, @apellido_paterno, " +
-                "@direccion, @telefono, @tipo_cliente, @ruc, @razon_social, @id_tipo_documento)";
+            string sentenciaSQL = "INSERT INTO Cliente(numero_documento, nombre, apellidos, tipo_documento) VALUES(@numero_documento, @nombre, @apellidos, @tipo_documento)";
             try
             {
                 SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
@@ -39,8 +37,7 @@ namespace Capa4_Persistencia
         public int modificarCliente(Cliente cliente)
         {
             int registros_afectados;
-            string sentenciaSQL = "UPDATE Cliente SET numero_documento = @numero_documento, nombre = @nombre, apellido_paterno = @apellido_paterno, apellido_materno = @apellido_materno, direccion = @direccion, " + 
-                "telefono = @telefono, tipo_cliente = @tipo_cliente, ruc = @ruc, razon_social = @razon_social, id_documento = @id_documento WHERE id_cliente = @id_cliente";
+            string sentenciaSQL = "UPDATE Cliente SET numero_documento = @numero_documento, nombre = @nombre, apellidos = @apellidos, tipo_documento = @tipo_documento WHERE id_cliente = @id_cliente";
             try
             {
                 SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
@@ -58,7 +55,7 @@ namespace Capa4_Persistencia
         public Cliente buscarPorDocumento(string numero_documento)
         {
             Cliente cliente = null;
-            String sentenciaSQL = "select id_cliente, numero_documento, nombre, apellido_paterno, apellido_materno FROM Cliente WHERE numero_documento = '" + numero_documento + "'";
+            String sentenciaSQL = "select id_cliente, numero_documento, nombre, apellidos, tipo_documento FROM Cliente WHERE numero_documento = '" + numero_documento + "'";
             try
             {
                 SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
@@ -68,8 +65,8 @@ namespace Capa4_Persistencia
                     cliente.Id_cliente = resultado.GetInt32(0);
                     cliente.Numero_documento = resultado.GetString(1);
                     cliente.Nombre = resultado.GetString(2);
-                    cliente.Apellido_paterno = resultado.GetString(3);
-                    cliente.Apellido_materno = resultado.GetString(4);
+                    cliente.Apellidos = resultado.GetString(3);
+                    cliente.Tipo_documento = resultado.GetString(4);
                 }
                 resultado.Close();
                 return cliente;
@@ -80,38 +77,12 @@ namespace Capa4_Persistencia
             }
         }
 
-        /*
-        private Cliente crearObjetoCliente(SqlDataReader resultado)
-        {
-            Cliente cliente;
-            cliente = new Cliente();
-            cliente.Id_cliente= resultado.GetInt32(0);
-            cliente.Numero_documento = resultado.GetString(1);
-            cliente.Nombre = resultado.GetString(2);
-            cliente.Apellido_paterno = resultado.GetString(3);
-            cliente.Apellido_materno = resultado.GetString(4);
-            cliente.Direccion = resultado.GetString(5);
-            cliente.Telefono = resultado.GetString(6);
-            cliente.Tipo_cliente = resultado.GetString(7);
-            cliente.Ruc = resultado.GetString(8);
-            cliente.Razon_social = resultado.GetString(9);
-            cliente.Ruc = resultado.GetString(10);
-            return cliente;
-        }
-        */
-
         private void asignarParametros(Cliente cliente, SqlCommand comando)
         {
             comando.Parameters.AddWithValue("@numero_documento", cliente.Numero_documento);
             comando.Parameters.AddWithValue("@nombre", cliente.Nombre);
-            comando.Parameters.AddWithValue("@apellido_paterno", cliente.Apellido_paterno);
-            comando.Parameters.AddWithValue("@apellido_materno", cliente.Apellido_materno);
-            comando.Parameters.AddWithValue("@direccion", cliente.Direccion);
-            comando.Parameters.AddWithValue("@telefono", cliente.Telefono);
-            comando.Parameters.AddWithValue("@tipo_cliente", cliente.Tipo_cliente);
-            comando.Parameters.AddWithValue("@ruc", cliente.Ruc);
-            comando.Parameters.AddWithValue("@razon_social", cliente.Razon_social);
-            comando.Parameters.AddWithValue("@id_documento", cliente.Tipo_documento.Id_documento);
+            comando.Parameters.AddWithValue("@apellidos", cliente.Apellidos);
+            comando.Parameters.AddWithValue("@tipo_documento", cliente.Tipo_documento);
         }
     }
 }
