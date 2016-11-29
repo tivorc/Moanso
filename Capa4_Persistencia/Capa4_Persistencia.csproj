@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="EmpleadoDAO.cs" />
     <Compile Include="GestorDAOSQL.cs" />
     <Compile Include="HabitacionDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaDAO.cs" />
     <Compile Include="TipoDocumentoDAO.cs" />
     <Compile Include="TipoHabitacionDAO.cs" />
   </ItemGroup>
