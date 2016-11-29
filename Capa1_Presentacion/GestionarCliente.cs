@@ -34,25 +34,31 @@ namespace Capa1_Presentacion
         }
         public void deshabilitar()
         {
-            txtID.Enabled = false;
             txtnumerodocumento.Enabled = false;
             txtnombre.Enabled = false;
-            txtapellidos.Enabled = false;
-            cbTipoDocumento.Enabled = false;
-            btnGuardar.Enabled = false;
-            btncancelar.Enabled = false;
+            txtapellidopaterno.Enabled = false;
+            txtapellidomaterno.Enabled = false;
+            txtdireccion.Enabled = false;
+            txttelefono.Enabled = false;
+            rdbclientenatural.Enabled = false;
+            rbdclientejuridico.Enabled = false;
+            txtruc.Enabled = false;
+            txtrazonsocial.Enabled = false;
             
         }
 
         public void habilitar()
         {
-            txtID.Enabled = true;
             txtnumerodocumento.Enabled = true;
             txtnombre.Enabled = true;
-            txtapellidos.Enabled = true;
-            cbTipoDocumento.Enabled = true;
-            btnGuardar.Enabled = true;
-            btncancelar.Enabled = true;
+            txtapellidopaterno.Enabled = true;
+            txtapellidomaterno.Enabled = true;
+            txtdireccion.Enabled = true;
+            txttelefono.Enabled = true;
+            rdbclientenatural.Enabled = true;
+            rbdclientejuridico.Enabled = true;
+            txtruc.Enabled = true;
+            txtrazonsocial.Enabled = true;
         }
     }
 }

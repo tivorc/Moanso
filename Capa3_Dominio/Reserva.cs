@@ -11,8 +11,8 @@ namespace Capa3_Dominio
         public int Id_reserva { get; set; }
         public DateTimeOffset Fecha_inicio { get; set; }
         public DateTimeOffset Fecha_fin { get; set; }
-        public string Estado { get; set; }
-        public string Tipo_reserva { get; set; }
+        public char Estado { get; set; }
+        public char Tipo_reserva { get; set; }
         public double Precio { get; set; }
         public Habitacion Habitacion { get; set; }
         public Empleado empleado { get; set; }

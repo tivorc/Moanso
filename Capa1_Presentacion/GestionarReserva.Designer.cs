@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarReserva));
             this.lblDniCliente = new System.Windows.Forms.Label();
             this.txtdnicliente = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tblreserva = new System.Windows.Forms.DataGridView();
+            this.Numerodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido_paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido_materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblidreserva = new System.Windows.Forms.Label();
             this.lblfechainicio = new System.Windows.Forms.Label();
             this.lblfechafin = new System.Windows.Forms.Label();
@@ -49,19 +52,13 @@
             this.btnseleccionar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.IDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblreserva)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDniCliente
             // 
             this.lblDniCliente.AutoSize = true;
-            this.lblDniCliente.Location = new System.Drawing.Point(142, 283);
+            this.lblDniCliente.Location = new System.Drawing.Point(69, 279);
             this.lblDniCliente.Name = "lblDniCliente";
             this.lblDniCliente.Size = new System.Drawing.Size(64, 13);
             this.lblDniCliente.TabIndex = 0;
@@ -69,14 +66,14 @@
             // 
             // txtdnicliente
             // 
-            this.txtdnicliente.Location = new System.Drawing.Point(226, 276);
+            this.txtdnicliente.Location = new System.Drawing.Point(153, 272);
             this.txtdnicliente.Name = "txtdnicliente";
             this.txtdnicliente.Size = new System.Drawing.Size(100, 20);
             this.txtdnicliente.TabIndex = 1;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(427, 273);
+            this.btnAgregar.Location = new System.Drawing.Point(354, 269);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(25, 23);
             this.btnAgregar.TabIndex = 2;
@@ -86,7 +83,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(351, 273);
+            this.btnBuscar.Location = new System.Drawing.Point(278, 269);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(57, 23);
             this.btnBuscar.TabIndex = 3;
@@ -98,20 +95,39 @@
             // 
             this.tblreserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblreserva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDCliente,
-            this.numeroDocumento,
-            this.Nombre,
-            this.Apellidos,
-            this.TipoDocumento});
+            this.Numerodocumento,
+            this.nombre,
+            this.apellido_paterno,
+            this.apellido_materno});
             this.tblreserva.Location = new System.Drawing.Point(72, 317);
             this.tblreserva.Name = "tblreserva";
-            this.tblreserva.Size = new System.Drawing.Size(537, 150);
+            this.tblreserva.Size = new System.Drawing.Size(442, 150);
             this.tblreserva.TabIndex = 4;
+            // 
+            // Numerodocumento
+            // 
+            this.Numerodocumento.HeaderText = "numerodocumento";
+            this.Numerodocumento.Name = "Numerodocumento";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // apellido_paterno
+            // 
+            this.apellido_paterno.HeaderText = "apellido_paterno";
+            this.apellido_paterno.Name = "apellido_paterno";
+            // 
+            // apellido_materno
+            // 
+            this.apellido_materno.HeaderText = "apellido_materno";
+            this.apellido_materno.Name = "apellido_materno";
             // 
             // lblidreserva
             // 
             this.lblidreserva.AutoSize = true;
-            this.lblidreserva.Location = new System.Drawing.Point(142, 46);
+            this.lblidreserva.Location = new System.Drawing.Point(69, 42);
             this.lblidreserva.Name = "lblidreserva";
             this.lblidreserva.Size = new System.Drawing.Size(64, 13);
             this.lblidreserva.TabIndex = 5;
@@ -120,7 +136,7 @@
             // lblfechainicio
             // 
             this.lblfechainicio.AutoSize = true;
-            this.lblfechainicio.Location = new System.Drawing.Point(139, 101);
+            this.lblfechainicio.Location = new System.Drawing.Point(66, 97);
             this.lblfechainicio.Name = "lblfechainicio";
             this.lblfechainicio.Size = new System.Drawing.Size(68, 13);
             this.lblfechainicio.TabIndex = 6;
@@ -130,7 +146,7 @@
             // lblfechafin
             // 
             this.lblfechafin.AutoSize = true;
-            this.lblfechafin.Location = new System.Drawing.Point(142, 163);
+            this.lblfechafin.Location = new System.Drawing.Point(69, 159);
             this.lblfechafin.Name = "lblfechafin";
             this.lblfechafin.Size = new System.Drawing.Size(57, 13);
             this.lblfechafin.TabIndex = 7;
@@ -139,7 +155,7 @@
             // lblestado
             // 
             this.lblestado.AutoSize = true;
-            this.lblestado.Location = new System.Drawing.Point(350, 46);
+            this.lblestado.Location = new System.Drawing.Point(277, 42);
             this.lblestado.Name = "lblestado";
             this.lblestado.Size = new System.Drawing.Size(43, 13);
             this.lblestado.TabIndex = 8;
@@ -148,7 +164,7 @@
             // lbltiporeserva
             // 
             this.lbltiporeserva.AutoSize = true;
-            this.lbltiporeserva.Location = new System.Drawing.Point(348, 101);
+            this.lbltiporeserva.Location = new System.Drawing.Point(275, 97);
             this.lbltiporeserva.Name = "lbltiporeserva";
             this.lbltiporeserva.Size = new System.Drawing.Size(74, 13);
             this.lbltiporeserva.TabIndex = 9;
@@ -157,7 +173,7 @@
             // lblprecio
             // 
             this.lblprecio.AutoSize = true;
-            this.lblprecio.Location = new System.Drawing.Point(348, 167);
+            this.lblprecio.Location = new System.Drawing.Point(275, 163);
             this.lblprecio.Name = "lblprecio";
             this.lblprecio.Size = new System.Drawing.Size(37, 13);
             this.lblprecio.TabIndex = 10;
@@ -165,7 +181,7 @@
             // 
             // txtidreserva
             // 
-            this.txtidreserva.Location = new System.Drawing.Point(226, 46);
+            this.txtidreserva.Location = new System.Drawing.Point(153, 42);
             this.txtidreserva.Name = "txtidreserva";
             this.txtidreserva.Size = new System.Drawing.Size(100, 20);
             this.txtidreserva.TabIndex = 11;
@@ -173,21 +189,21 @@
             // 
             // txtfechainicio
             // 
-            this.txtfechainicio.Location = new System.Drawing.Point(226, 101);
+            this.txtfechainicio.Location = new System.Drawing.Point(153, 97);
             this.txtfechainicio.Name = "txtfechainicio";
             this.txtfechainicio.Size = new System.Drawing.Size(100, 20);
             this.txtfechainicio.TabIndex = 12;
             // 
             // txtfechafin
             // 
-            this.txtfechafin.Location = new System.Drawing.Point(226, 160);
+            this.txtfechafin.Location = new System.Drawing.Point(153, 156);
             this.txtfechafin.Name = "txtfechafin";
             this.txtfechafin.Size = new System.Drawing.Size(100, 20);
             this.txtfechafin.TabIndex = 13;
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(427, 160);
+            this.txtprecio.Location = new System.Drawing.Point(354, 156);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(121, 20);
             this.txtprecio.TabIndex = 16;
@@ -195,7 +211,7 @@
             // lblhabitacion
             // 
             this.lblhabitacion.AutoSize = true;
-            this.lblhabitacion.Location = new System.Drawing.Point(139, 225);
+            this.lblhabitacion.Location = new System.Drawing.Point(66, 221);
             this.lblhabitacion.Name = "lblhabitacion";
             this.lblhabitacion.Size = new System.Drawing.Size(61, 13);
             this.lblhabitacion.TabIndex = 17;
@@ -203,14 +219,14 @@
             // 
             // txthabitacion
             // 
-            this.txthabitacion.Location = new System.Drawing.Point(226, 225);
+            this.txthabitacion.Location = new System.Drawing.Point(153, 221);
             this.txthabitacion.Name = "txthabitacion";
             this.txthabitacion.Size = new System.Drawing.Size(100, 20);
             this.txthabitacion.TabIndex = 18;
             // 
             // btnseleccionar
             // 
-            this.btnseleccionar.Location = new System.Drawing.Point(351, 223);
+            this.btnseleccionar.Location = new System.Drawing.Point(278, 219);
             this.btnseleccionar.Name = "btnseleccionar";
             this.btnseleccionar.Size = new System.Drawing.Size(75, 23);
             this.btnseleccionar.TabIndex = 19;
@@ -220,7 +236,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(427, 46);
+            this.comboBox1.Location = new System.Drawing.Point(354, 42);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
@@ -228,52 +244,16 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(427, 101);
+            this.comboBox2.Location = new System.Drawing.Point(354, 97);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 21;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(69, 496);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(45, 23);
-            this.btnVolver.TabIndex = 22;
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // IDCliente
-            // 
-            this.IDCliente.HeaderText = "ID Cliente";
-            this.IDCliente.Name = "IDCliente";
-            // 
-            // numeroDocumento
-            // 
-            this.numeroDocumento.HeaderText = "Numero Documento";
-            this.numeroDocumento.Name = "numeroDocumento";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
             // 
             // GestionarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 531);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnseleccionar);
@@ -309,6 +289,10 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView tblreserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numerodocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_paterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_materno;
         private System.Windows.Forms.Label lblidreserva;
         private System.Windows.Forms.Label lblfechainicio;
         private System.Windows.Forms.Label lblfechafin;
@@ -324,11 +308,5 @@
         private System.Windows.Forms.Button btnseleccionar;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
     }
 }

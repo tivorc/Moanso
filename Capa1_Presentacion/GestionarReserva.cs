@@ -37,12 +37,5 @@ namespace Capa1_Presentacion
         {
 
         }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            Principal principal = new Principal();
-            principal.Show();
-            this.Hide();
-        }
     }
 }
