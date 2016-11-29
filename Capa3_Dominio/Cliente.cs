@@ -10,7 +10,7 @@ namespace Capa3_Dominio
     {
         public int Id_cliente { get; set; }
         public string Numero_documento { get; set; }
-        public string Nombres { get; set; }
+        public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Tipo_documento { get; set; }
     }

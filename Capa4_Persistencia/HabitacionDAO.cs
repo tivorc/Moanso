@@ -19,7 +19,7 @@ namespace Capa4_Persistencia
         public int guardarHabitacion(Habitacion habitacion)
         {
             int registros_afectados;
-            String sentenciaSQL = "INSERT INTO Habitacion(numero, piso, estado, id_tipo_habitacion) VALUES(@numero, @piso, @estado, @id_tipo_habitacion)";
+            String sentenciaSQL = "INSERT INTO Habitacion(numero, tipo_habitacion, precio, estado) VALUES(@numero, @tipo_habitacion, @precio, @estado)";
             try
             {
                 SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
@@ -37,8 +37,7 @@ namespace Capa4_Persistencia
         {
             List<Habitacion> listaHabitacionesDisponibles = new List<Habitacion>();
             Habitacion habitacion;
-            TipoHabitacion tipoHabitacion;
-            string sentenciaSQL = "SELECT h.id_habitacion, h.numero, h.piso, h.estado, t.nombre, t.precio_hora, t.precio_dia FROM Habitacion h inner join TipoHabitacion t on h.id_tipo_habitacion = t.id_tipo_habitacion WHERE h.estado = 'D'";
+            string sentenciaSQL = "SELECT id_habitacion, numero, tipo_habitacion, precio, estado FROM Habitacion WHERE estado = 'DISPONIBLE'";
             try
             {
                 SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
@@ -46,15 +45,11 @@ namespace Capa4_Persistencia
                 {
 
                     habitacion = new Habitacion();
-                    tipoHabitacion = new TipoHabitacion();
                     habitacion.Id_habitacion = resultado.GetInt32(0);
                     habitacion.Numero = resultado.GetString(1);
-                    habitacion.Piso = resultado.GetString(2);
-                    habitacion.Estado = resultado.GetString(3);
-                    tipoHabitacion.Nombre = resultado.GetString(4);
-                    tipoHabitacion.PrecioHora = resultado.GetDouble(5);
-                    tipoHabitacion.PrecioDia = resultado.GetDouble(6);
-                    habitacion.Tipo_habitacion = tipoHabitacion;
+                    habitacion.Tipo_habitacion = resultado.GetString(2);
+                    habitacion.Precio = resultado.GetDouble(3);
+                    habitacion.Estado = resultado.GetString(4);
                     listaHabitacionesDisponibles.Add(habitacion);
                 }
                 resultado.Close();
@@ -69,30 +64,23 @@ namespace Capa4_Persistencia
 
         public List<Habitacion> listarHabitaciones()
         {
-            List<Habitacion> listaHabitacionesDisponibles = new List<Habitacion>();
+            List<Habitacion> listaHabitaciones = new List<Habitacion>();
             Habitacion habitacion;
-            TipoHabitacion tipoHabitacion;
-            string sentenciaSQL = "SELECT h.numero, h.piso, h.estado, t.nombre, descripcion, t.precio_hora, t.precio_dia FROM Habitacion h inner join TipoHabitacion t on h.id_tipo_habitacion = t.id_tipo_habitacion";
+            string sentenciaSQL = "SELECT numero, tipo_habitacion, precio, estado FROM Habitacion";
             try
             {
                 SqlDataReader resultado = gestorDAOSQL.ejecutarConsulta(sentenciaSQL);
                 while (resultado.Read())
                 {
-
                     habitacion = new Habitacion();
-                    tipoHabitacion = new TipoHabitacion();
                     habitacion.Numero = resultado.GetString(0);
-                    habitacion.Piso = resultado.GetString(1);
-                    habitacion.Estado = resultado.GetString(2);
-                    tipoHabitacion.Nombre = resultado.GetString(3);
-                    tipoHabitacion.Descripcion = resultado.GetString(4);
-                    tipoHabitacion.PrecioHora = resultado.GetDouble(5);
-                    tipoHabitacion.PrecioDia = resultado.GetDouble(6);
-                    habitacion.Tipo_habitacion = tipoHabitacion;
-                    listaHabitacionesDisponibles.Add(habitacion);
+                    habitacion.Tipo_habitacion = resultado.GetString(1);
+                    habitacion.Precio = resultado.GetDouble(2);
+                    habitacion.Estado = resultado.GetString(3);
+                    listaHabitaciones.Add(habitacion);
                 }
                 resultado.Close();
-                return listaHabitacionesDisponibles;
+                return listaHabitaciones;
             }
             catch (Exception e)
             {
@@ -104,7 +92,7 @@ namespace Capa4_Persistencia
         public int modificarHabitacion(Habitacion habitacion)
         {
             int registros_afectados;
-            string sentenciaSQL = "UPDATE Habitacion SET nombre = @nombre, numero = @numero, piso = @piso, id_tipo_habitacion = @id_tipo_habitacion";
+            string sentenciaSQL = "UPDATE Habitacion SET numero = @numero, tipo_habitacion = @tipo_habitacion, precio = @precio, estado = @estado";
             try
             {
                 SqlCommand comando = gestorDAOSQL.obtenerComandoSQL(sentenciaSQL);
@@ -139,9 +127,9 @@ namespace Capa4_Persistencia
         private void asignarParametrosHabitacion(Habitacion habitacion, SqlCommand comando)
         {
             comando.Parameters.AddWithValue("@numero", habitacion.Numero);
-            comando.Parameters.AddWithValue("@piso", habitacion.Piso);
+            comando.Parameters.AddWithValue("@tipo_habitacion", habitacion.Tipo_habitacion);
+            comando.Parameters.AddWithValue("@precio", habitacion.Precio);
             comando.Parameters.AddWithValue("@estado", habitacion.Estado);
-            comando.Parameters.AddWithValue("@id_tipo_habitacion", habitacion.Tipo_habitacion.Id_tipo_habitacion);
         }
     }
 }
