@@ -59,7 +59,7 @@ namespace Capa1_Presentacion
 
         private void Habilitar()
         {
-            txtIDHabitacion.Enabled = true;
+            txtIDHabitacion.Enabled = false;
             txtNumeroHabitacion.Enabled = true;
             comboboxTipo.Enabled = true;
             txtPrecio.Enabled = true;
@@ -69,6 +69,7 @@ namespace Capa1_Presentacion
         private void btnAgregarHabitacion_Click(object sender, EventArgs e)
         {
             Habilitar();
+            
         }
 
         private void cbPiso_SelectedIndexChanged(object sender, EventArgs e)
