@@ -25,7 +25,7 @@ namespace Capa1_Presentacion
             InitializeComponent();
             tipoAccion = ACCION_CREAR;
             this.cliente = new Cliente();
-            deshabilitar();
+           // deshabilitar();
         }
         private void configurarColumnasDataGridView()
         {
@@ -61,9 +61,9 @@ namespace Capa1_Presentacion
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            habilitar();
+           // habilitar();
         }
-        public void deshabilitar()
+       /* public void deshabilitar()
         {
             txtnumerodocumento.Enabled = false;
             txtnombre.Enabled = false;
@@ -91,7 +91,7 @@ namespace Capa1_Presentacion
             txtruc.Enabled = true;
             txtrazonsocial.Enabled = true;
         }
-
+        */
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
