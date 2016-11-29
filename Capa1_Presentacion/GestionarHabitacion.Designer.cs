@@ -253,6 +253,7 @@
             this.Name = "GestionarHabitacion";
             this.Text = "GestionarHabitacion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GestionarHabitacion_FormClosing);
+            this.Load += new System.EventHandler(this.GestionarHabitacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaHabitacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
