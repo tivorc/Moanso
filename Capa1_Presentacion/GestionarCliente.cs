@@ -18,7 +18,7 @@ namespace Capa1_Presentacion
         Cliente cliente;
         private const int ACCION_CREAR = 1;
         private const int ACCION_MODIFICAR = 2;
-        private int tipoAcciones;
+        private int tipoAccion;
 
         public GestionarCliente()
         {
@@ -61,6 +61,9 @@ namespace Capa1_Presentacion
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            DatosCliente datoscliente = new DatosCliente();
+            datoscliente.Show();
+            this.Hide();
            // habilitar();
         }
        /* public void deshabilitar()

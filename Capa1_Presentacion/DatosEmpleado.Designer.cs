@@ -42,12 +42,13 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.cbTipoEmpleado = new System.Windows.Forms.ComboBox();
+            this.comboboxTipoEmpleado = new System.Windows.Forms.ComboBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.cbTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.comboboxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -166,13 +167,13 @@
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 13;
             // 
-            // cbTipoEmpleado
+            // comboboxTipoEmpleado
             // 
-            this.cbTipoEmpleado.FormattingEnabled = true;
-            this.cbTipoEmpleado.Location = new System.Drawing.Point(363, 44);
-            this.cbTipoEmpleado.Name = "cbTipoEmpleado";
-            this.cbTipoEmpleado.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoEmpleado.TabIndex = 14;
+            this.comboboxTipoEmpleado.FormattingEnabled = true;
+            this.comboboxTipoEmpleado.Location = new System.Drawing.Point(363, 44);
+            this.comboboxTipoEmpleado.Name = "comboboxTipoEmpleado";
+            this.comboboxTipoEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.comboboxTipoEmpleado.TabIndex = 14;
             // 
             // txtUsuario
             // 
@@ -188,17 +189,17 @@
             this.txtContraseña.Size = new System.Drawing.Size(121, 20);
             this.txtContraseña.TabIndex = 16;
             // 
-            // cbTipoDocumento
+            // comboboxTipoDocumento
             // 
-            this.cbTipoDocumento.FormattingEnabled = true;
-            this.cbTipoDocumento.Location = new System.Drawing.Point(363, 142);
-            this.cbTipoDocumento.Name = "cbTipoDocumento";
-            this.cbTipoDocumento.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoDocumento.TabIndex = 17;
+            this.comboboxTipoDocumento.FormattingEnabled = true;
+            this.comboboxTipoDocumento.Location = new System.Drawing.Point(363, 142);
+            this.comboboxTipoDocumento.Name = "comboboxTipoDocumento";
+            this.comboboxTipoDocumento.Size = new System.Drawing.Size(121, 21);
+            this.comboboxTipoDocumento.TabIndex = 17;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(183, 228);
+            this.btnGuardar.Location = new System.Drawing.Point(200, 226);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 18;
@@ -208,24 +209,35 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(323, 228);
+            this.btnCancelar.Location = new System.Drawing.Point(323, 226);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(86, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "AGREGAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DatosEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cbTipoDocumento);
+            this.Controls.Add(this.comboboxTipoDocumento);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.cbTipoEmpleado);
+            this.Controls.Add(this.comboboxTipoEmpleado);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombre);
@@ -263,11 +275,12 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.ComboBox cbTipoEmpleado;
+        private System.Windows.Forms.ComboBox comboboxTipoEmpleado;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.ComboBox cbTipoDocumento;
+        private System.Windows.Forms.ComboBox comboboxTipoDocumento;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button button1;
     }
 }

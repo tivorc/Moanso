@@ -30,7 +30,7 @@ namespace Capa1_Presentacion
         {
             DatosEmpleado datosEmpleado = new DatosEmpleado();
             datosEmpleado.Show();
-                
+            this.Hide();    
         }
     }
 }
