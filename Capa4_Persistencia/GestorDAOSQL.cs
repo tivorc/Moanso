@@ -126,9 +126,9 @@ namespace Capa4_Persistencia
                 comando.CommandType = CommandType.StoredProcedure;
                 return comando;
             }
-            catch (Exception er)
+            catch (Exception e)
             {
-                throw er;
+                throw e;
             }
         }
     }
