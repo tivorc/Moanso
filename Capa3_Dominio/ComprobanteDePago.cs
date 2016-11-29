@@ -15,7 +15,7 @@ namespace Capa3_Dominio
         public string Estado { get; set; }
         public Reserva Reserva { get; set; }
         public Cliente Cliente { get; set; }
-
+        /*
         public double calcularMonto()
         {
             bool cobro = Reserva.definirCobro();
@@ -52,5 +52,6 @@ namespace Capa3_Dominio
             TimeSpan ts = fin - inicio;
             return ts.Hours;
         }
+        */
     }
 }
